@@ -8,32 +8,63 @@
 
 typedef struct {
     lv_obj_t *ui_telaMain_dashboard;        // Dashboard principal
-    lv_obj_t *ui_telaMain_containerMain;    // Container principal (equivalente a ui_Dashoboard_cont_Main)
-    lv_obj_t *ui_telaMain_cont_updown;      // Container updown (equivalente a ui_Dashoboard_cont_updown)
-    //btn_l1
-    lv_obj_t *ui_telaMain_btn_upL1;         // Botão up L1 (equivalente a ui_Dashoboard_btn_upL1)
-    lv_obj_t *ui_telaMain_label_btn_upL1;   // Label do botão up L1
-    lv_obj_t *ui_telaMain_btn_downL1;       // Botão down L1 (equivalente a ui_Dashoboard_btn_downL1)
-    lv_obj_t *ui_telaMain_label_btn_downL1; // Label do botão down L1
-    lv_obj_t *ui_telaMain_img_upL1;         // Imagem do botão up L1
-	lv_obj_t *ui_telaMain_img_downL1;       // Imagem do botão down L1
-    //btn_l2
-    lv_obj_t *ui_telaMain_btn_upL2;         // Botão up L2 (equivalente a ui_Dashoboard_btn_upL2)
-    lv_obj_t *ui_telaMain_label_btn_upL2;   // Label do botão up L2
-    lv_obj_t *ui_telaMain_btn_downL2;       // Botão down L2 (equivalente a ui_Dashoboard_btn_downL2)
-    lv_obj_t *ui_telaMain_label_btn_downL2; // Label do botão down L2
-	lv_obj_t *ui_telaMain_img_upL2;         // Imagem do botão up L2   
-    lv_obj_t *ui_telaMain_img_downL2;       // Imagem do botão down L2
-    //btn_l3
-    lv_obj_t *ui_telaMain_btn_upL3;         // Botão up L3 (equivalente a ui_Dashoboard_btn_upL3)
-    lv_obj_t *ui_telaMain_label_btn_upL3;   // Label do botão up L3
-    lv_obj_t *ui_telaMain_btn_downL3;       // Botão down L3 (equivalente a ui_Dashoboard_btn_downL3)
-    lv_obj_t *ui_telaMain_label_btn_downL3; // Label do botão down L3
-	lv_obj_t *ui_telaMain_img_upL3;         // Imagem do botão up L3
-	lv_obj_t *ui_telaMain_img_downL3;       // Imagem do botão down L3
+    lv_obj_t *ui_telaMain_containerMain;    // Container principal
+    lv_obj_t *ui_telaMain_cont_updown;      // Container updown
+    // btn_l1
+    lv_obj_t *ui_telaMain_btn_upL1;
+    lv_obj_t *ui_telaMain_label_btn_upL1;
+    lv_obj_t *ui_telaMain_btn_downL1;
+    lv_obj_t *ui_telaMain_label_btn_downL1;
+    lv_obj_t *ui_telaMain_img_upL1;
+    lv_obj_t *ui_telaMain_img_downL1;
+    // btn_l2
+    lv_obj_t *ui_telaMain_btn_upL2;
+    lv_obj_t *ui_telaMain_label_btn_upL2;
+    lv_obj_t *ui_telaMain_btn_downL2;
+    lv_obj_t *ui_telaMain_label_btn_downL2;
+    lv_obj_t *ui_telaMain_img_upL2;
+    lv_obj_t *ui_telaMain_img_downL2;
+    // btn_l3
+    lv_obj_t *ui_telaMain_btn_upL3;
+    lv_obj_t *ui_telaMain_label_btn_upL3;
+    lv_obj_t *ui_telaMain_btn_downL3;
+    lv_obj_t *ui_telaMain_label_btn_downL3;
+    lv_obj_t *ui_telaMain_img_upL3;
+    lv_obj_t *ui_telaMain_img_downL3;
+    // container avançado
+    lv_obj_t *ui_telaMain_cont_avancado;
+    lv_obj_t *ui_telaMain_btnPercent1;
+    lv_obj_t *ui_telaMain_label_btnPercent1;
+    lv_obj_t *ui_telaMain_btnPercent2;
+    lv_obj_t *ui_telaMain_label_btnPercent2;
+    lv_obj_t *ui_telaMain_btnPercent3;
+    lv_obj_t *ui_telaMain_label_btnPercent3;
+    lv_obj_t *ui_telaMain_btnPercent4;
+    lv_obj_t *ui_telaMain_label_btnPercent4;
+    lv_obj_t *ui_telaMain_btnPercent5;
+    lv_obj_t *ui_telaMain_label_btnPercent5;
+    lv_obj_t *ui_telaMain_btnConfig;
+    lv_obj_t *ui_telaMain_label_btnConfig;
+    lv_obj_t *ui_telaMain_btnNominal;
+    lv_obj_t *ui_telaMain_label_btnNominal;
+    lv_obj_t *ui_telaMain_btnAgrupar;
+    lv_obj_t *ui_telaMain_label_btnAgrupar;
+    // Container SelMode
+    lv_obj_t *ui_telaMain_cont_selMode;
+    lv_obj_t *ui_telaMain_selModePercent;
+    lv_obj_t *ui_telaMain_selModeGrandeza;
+    // Container UpPasso
+    lv_obj_t *ui_telaMain_cont_upPasso;
+    lv_obj_t *ui_telaMain_selPasso1;
+    lv_obj_t *ui_telaMain_selPasso2;
+    lv_obj_t *ui_telaMain_selPasso3;
+    lv_obj_t *ui_telaMain_selPasso4;
+    // Container Sequencia
+    lv_obj_t *ui_telaMain_cont_sequencia;
 
-    lv_obj_t *btn_1;                        // Botão "Iniciar"
-    lv_obj_t *label_btn1;                   // Label do botão
+    // Exemplo de objetos antigos, mantenha se usados em outro lugar
+    lv_obj_t *btn_1;
+    lv_obj_t *ui_telaMain_label_btn_1;
 } ui_t;
 
 void ihmTelaMainInit();
