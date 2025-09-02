@@ -16,7 +16,7 @@ static unsigned long ihmTick = 0;
 static unsigned long ihmDelayTick = 0;
 
 void my_disp_flush(lv_disp_drv_t *disp, const lv_area_t *area, lv_color_t *color_p) {
-    Serial.printf("Flush area: x1=%d, y1=%d, x2=%d, y2=%d\n", area->x1, area->y1, area->x2, area->y2);
+    //Serial.printf("Flush area: x1=%d, y1=%d, x2=%d, y2=%d\n", area->x1, area->y1, area->x2, area->y2);
     uint32_t w = (area->x2 - area->x1 + 1);
     uint32_t h = (area->y2 - area->y1 + 1);
     gfx.startWrite();
@@ -56,7 +56,7 @@ void ihmControlInit() {
     lv_disp_drv_init(&disp_drv);
     disp_drv.hor_res = SCREEN_WIDTH;
     disp_drv.ver_res = SCREEN_HEIGHT;
-    disp_drv.full_refresh = 1; // Forçar renderização completa para evitar offsets
+    //disp_drv.full_refresh = 1; // Forçar renderização completa para evitar offsets
     disp_drv.flush_cb = my_disp_flush;
     disp_drv.draw_buf = &draw_buf;
     lv_disp_drv_register(&disp_drv);
@@ -70,7 +70,7 @@ void ihmControlInit() {
     Serial.println("Driver de toque registrado");
 
     // Depuração da resolução
-    Serial.printf("Display width: %d, height: %d\n", gfx.width(), gfx.height());
+    //Serial.printf("Display width: %d, height: %d\n", gfx.width(), gfx.height());
 
     // Cria um label central com a versão
     lv_obj_t *label = lv_label_create(lv_scr_act());

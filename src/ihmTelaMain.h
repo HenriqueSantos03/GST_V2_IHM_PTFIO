@@ -73,6 +73,34 @@ typedef struct {
     lv_obj_t *ui_telaMain_label_btnSeqL1L3;
     lv_obj_t *ui_telaMain_btnSeqL1L2L3;
     lv_obj_t *ui_telaMain_label_btnSeqL1L2L3;
+    // Container Teclado
+    lv_obj_t *ui_telaMain_cont_teclado;
+    lv_obj_t *ui_telaMain_btn_n0;
+    lv_obj_t *ui_telaMain_label_btn_n0;
+    lv_obj_t *ui_telaMain_btn_n1;
+    lv_obj_t *ui_telaMain_label_btn_n1;
+    lv_obj_t *ui_telaMain_btn_n2;
+    lv_obj_t *ui_telaMain_label_btn_n2;
+    lv_obj_t *ui_telaMain_btn_n3;
+    lv_obj_t *ui_telaMain_label_btn_n3;
+    lv_obj_t *ui_telaMain_btn_n4;
+    lv_obj_t *ui_telaMain_label_btn_n4;
+    lv_obj_t *ui_telaMain_btn_n5;
+    lv_obj_t *ui_telaMain_label_btn_n5;
+    lv_obj_t *ui_telaMain_btn_n6;
+    lv_obj_t *ui_telaMain_label_btn_n6;
+    lv_obj_t *ui_telaMain_btn_n7;
+    lv_obj_t *ui_telaMain_label_btn_n7;
+    lv_obj_t *ui_telaMain_btn_n8;
+    lv_obj_t *ui_telaMain_label_btn_n8;
+    lv_obj_t *ui_telaMain_btn_n9;
+    lv_obj_t *ui_telaMain_label_btn_n9;
+    lv_obj_t *ui_telaMain_btn_ok;
+    lv_obj_t *ui_telaMain_label_btn_ok;
+    lv_obj_t *ui_telaMain_btn_cancel;
+    lv_obj_t *ui_telaMain_label_btn_cancel;
+    // container escala
+    lv_obj_t *ui_telaMain_cont_escala;
 
     // Exemplo de objetos antigos, mantenha se usados em outro lugar
     lv_obj_t *btn_1;
