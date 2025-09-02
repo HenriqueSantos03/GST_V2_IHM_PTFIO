@@ -101,6 +101,30 @@ typedef struct {
     lv_obj_t *ui_telaMain_label_btn_cancel;
     // container escala
     lv_obj_t *ui_telaMain_cont_escala;
+    lv_obj_t *ui_telaMain_cont_escala_tensoes;
+    lv_obj_t *ui_telaMain_selEscala0;
+    lv_obj_t *ui_telaMain_selEscala1;   
+    lv_obj_t *ui_telaMain_selEscala2;
+    lv_obj_t *ui_telaMain_selEscala3;
+    lv_obj_t *ui_telaMain_selEscala4;
+    lv_obj_t *ui_telaMain_selEscala5;
+    lv_obj_t *ui_telaMain_selEscala6;
+    lv_obj_t *ui_telaMain_selEscala7;
+    // container Frequencia
+    lv_obj_t *ui_telaMain_cont_frequencia;
+    lv_obj_t *ui_telaMain_label_frequencia;
+    lv_obj_t *ui_telaMain_label_pointEsq;
+    lv_obj_t *ui_telaMain_label_freqAtual;
+    lv_obj_t *ui_telaMain_label_pointDir;
+    lv_obj_t *ui_telaMain_sliderFreq;
+    lv_obj_t *ui_telaMain_btnFreq50;
+    lv_obj_t *ui_telaMain_label_btnFreq50;
+    lv_obj_t *ui_telaMain_btnFreq60;
+    lv_obj_t *ui_telaMain_label_btnFreq60;
+    // containers de fase (cont_L1, cont_L2, cont_L3)
+    lv_obj_t *ui_telaMain_cont_L1;
+    lv_obj_t *ui_telaMain_cont_L2;
+    lv_obj_t *ui_telaMain_cont_L3;
 
     // Exemplo de objetos antigos, mantenha se usados em outro lugar
     lv_obj_t *btn_1;
