@@ -2105,6 +2105,981 @@ void createMainUI(ui_t *ui) {
     lv_obj_set_style_pad_right(ui->ui_telaMain_cont_L1, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
     lv_obj_set_style_shadow_width(ui->ui_telaMain_cont_L1, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
 
+    //Write codes ui_telaMain_label_L1
+    ui->ui_telaMain_label_L1 = lv_label_create(ui->ui_telaMain_cont_L1);
+    lv_label_set_text(ui->ui_telaMain_label_L1, "L1");
+    lv_label_set_long_mode(ui->ui_telaMain_label_L1, LV_LABEL_LONG_WRAP);
+    lv_obj_set_pos(ui->ui_telaMain_label_L1, 10, 10);
+    lv_obj_set_size(ui->ui_telaMain_label_L1, 35, 31);
+
+    //Write style for ui_telaMain_label_L1, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+    lv_obj_set_style_border_width(ui->ui_telaMain_label_L1, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_radius(ui->ui_telaMain_label_L1, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_color(ui->ui_telaMain_label_L1, lv_color_hex(0x52DAFF), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_font(ui->ui_telaMain_label_L1, &lv_font_Antonio_Regular_18, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_opa(ui->ui_telaMain_label_L1, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_letter_space(ui->ui_telaMain_label_L1, 2, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_line_space(ui->ui_telaMain_label_L1, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_align(ui->ui_telaMain_label_L1, LV_TEXT_ALIGN_CENTER, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_opa(ui->ui_telaMain_label_L1, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_top(ui->ui_telaMain_label_L1, 8, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_right(ui->ui_telaMain_label_L1, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_bottom(ui->ui_telaMain_label_L1, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_left(ui->ui_telaMain_label_L1, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_shadow_width(ui->ui_telaMain_label_L1, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+    //Write codes ui_telaMain_label_v_L1
+    ui->ui_telaMain_label_v_L1 = lv_label_create(ui->ui_telaMain_cont_L1);
+    lv_label_set_text(ui->ui_telaMain_label_v_L1, "V");
+    lv_label_set_long_mode(ui->ui_telaMain_label_v_L1, LV_LABEL_LONG_WRAP);
+    lv_obj_set_pos(ui->ui_telaMain_label_v_L1, 155, 24);
+    lv_obj_set_size(ui->ui_telaMain_label_v_L1, 45, 42);
+
+    //Write style for ui_telaMain_label_v_L1, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+    lv_obj_set_style_border_width(ui->ui_telaMain_label_v_L1, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_radius(ui->ui_telaMain_label_v_L1, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_color(ui->ui_telaMain_label_v_L1, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_font(ui->ui_telaMain_label_v_L1, &lv_font_Alatsi_Regular_26, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_opa(ui->ui_telaMain_label_v_L1, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_letter_space(ui->ui_telaMain_label_v_L1, 2, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_line_space(ui->ui_telaMain_label_v_L1, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_align(ui->ui_telaMain_label_v_L1, LV_TEXT_ALIGN_CENTER, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_opa(ui->ui_telaMain_label_v_L1, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_top(ui->ui_telaMain_label_v_L1, 8, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_right(ui->ui_telaMain_label_v_L1, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_bottom(ui->ui_telaMain_label_v_L1, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_left(ui->ui_telaMain_label_v_L1, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_shadow_width(ui->ui_telaMain_label_v_L1, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+    //Write codes ui_telaMain_label_mA_L1
+    ui->ui_telaMain_label_mA_L1 = lv_label_create(ui->ui_telaMain_cont_L1);
+    lv_label_set_text(ui->ui_telaMain_label_mA_L1, "mA");
+    lv_label_set_long_mode(ui->ui_telaMain_label_mA_L1, LV_LABEL_LONG_WRAP);
+    lv_obj_set_pos(ui->ui_telaMain_label_mA_L1, 56, 68);
+    lv_obj_set_size(ui->ui_telaMain_label_mA_L1, 45, 33);
+
+    //Write style for ui_telaMain_label_mA_L1, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+    lv_obj_set_style_border_width(ui->ui_telaMain_label_mA_L1, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_radius(ui->ui_telaMain_label_mA_L1, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_color(ui->ui_telaMain_label_mA_L1, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_font(ui->ui_telaMain_label_mA_L1, &lv_font_Alatsi_Regular_18, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_opa(ui->ui_telaMain_label_mA_L1, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_letter_space(ui->ui_telaMain_label_mA_L1, 2, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_line_space(ui->ui_telaMain_label_mA_L1, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_align(ui->ui_telaMain_label_mA_L1, LV_TEXT_ALIGN_CENTER, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_opa(ui->ui_telaMain_label_mA_L1, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_top(ui->ui_telaMain_label_mA_L1, 8, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_right(ui->ui_telaMain_label_mA_L1, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_bottom(ui->ui_telaMain_label_mA_L1, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_left(ui->ui_telaMain_label_mA_L1, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_shadow_width(ui->ui_telaMain_label_mA_L1, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+    //Write codes ui_telaMain_label_fp_L1
+    ui->ui_telaMain_label_fp_L1 = lv_label_create(ui->ui_telaMain_cont_L1);
+    lv_label_set_text(ui->ui_telaMain_label_fp_L1, "FP:");
+    lv_label_set_long_mode(ui->ui_telaMain_label_fp_L1, LV_LABEL_LONG_WRAP);
+    lv_obj_set_pos(ui->ui_telaMain_label_fp_L1, 101, 68);
+    lv_obj_set_size(ui->ui_telaMain_label_fp_L1, 45, 33);
+
+    //Write style for ui_telaMain_label_fp_L1, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+    lv_obj_set_style_border_width(ui->ui_telaMain_label_fp_L1, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_radius(ui->ui_telaMain_label_fp_L1, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_color(ui->ui_telaMain_label_fp_L1, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_font(ui->ui_telaMain_label_fp_L1, &lv_font_montserratMedium_18, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_opa(ui->ui_telaMain_label_fp_L1, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_letter_space(ui->ui_telaMain_label_fp_L1, 2, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_line_space(ui->ui_telaMain_label_fp_L1, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_align(ui->ui_telaMain_label_fp_L1, LV_TEXT_ALIGN_CENTER, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_opa(ui->ui_telaMain_label_fp_L1, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_top(ui->ui_telaMain_label_fp_L1, 8, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_right(ui->ui_telaMain_label_fp_L1, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_bottom(ui->ui_telaMain_label_fp_L1, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_left(ui->ui_telaMain_label_fp_L1, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_shadow_width(ui->ui_telaMain_label_fp_L1, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+    //Write codes ui_telaMain_linhaSup_L1
+    ui->ui_telaMain_linhaSup_L1 = lv_line_create(ui->ui_telaMain_cont_L1);
+    static lv_point_t ui_telaMain_linhaSup_L1[] = {{0, 0},{600, 0},};
+    lv_line_set_points(ui->ui_telaMain_linhaSup_L1, ui_telaMain_linhaSup_L1, 2);
+    lv_obj_set_pos(ui->ui_telaMain_linhaSup_L1, 6, 68);
+    lv_obj_set_size(ui->ui_telaMain_linhaSup_L1, 186, 4);
+
+    //Write style for ui_telaMain_linhaSup_L1, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+    lv_obj_set_style_line_width(ui->ui_telaMain_linhaSup_L1, 2, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_line_color(ui->ui_telaMain_linhaSup_L1, lv_color_hex(0x656461), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_line_opa(ui->ui_telaMain_linhaSup_L1, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+    //Write codes ui_telaMain_linhaInf_L1
+    ui->ui_telaMain_linhaInf_L1 = lv_line_create(ui->ui_telaMain_cont_L1);
+    static lv_point_t ui_telaMain_linhaInf_L1[] = {{0, 0},{600, 0},};
+    lv_line_set_points(ui->ui_telaMain_linhaInf_L1, ui_telaMain_linhaInf_L1, 2);
+    lv_obj_set_pos(ui->ui_telaMain_linhaInf_L1, 4, 100);
+    lv_obj_set_size(ui->ui_telaMain_linhaInf_L1, 186, 4);
+
+    //Write style for ui_telaMain_linhaInf_L1, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+    lv_obj_set_style_line_width(ui->ui_telaMain_linhaInf_L1, 2, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_line_color(ui->ui_telaMain_linhaInf_L1, lv_color_hex(0x656461), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_line_opa(ui->ui_telaMain_linhaInf_L1, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+    //Write codes ui_telaMain_label_set_L1
+    ui->ui_telaMain_label_set_L1 = lv_label_create(ui->ui_telaMain_cont_L1);
+    lv_label_set_text(ui->ui_telaMain_label_set_L1, "SET:");
+    lv_label_set_long_mode(ui->ui_telaMain_label_set_L1, LV_LABEL_LONG_WRAP);
+    lv_obj_set_pos(ui->ui_telaMain_label_set_L1, 4, 101);
+    lv_obj_set_size(ui->ui_telaMain_label_set_L1, 60, 30);
+
+    //Write style for ui_telaMain_label_set_L1, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+    lv_obj_set_style_border_width(ui->ui_telaMain_label_set_L1, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_radius(ui->ui_telaMain_label_set_L1, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_color(ui->ui_telaMain_label_set_L1, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_font(ui->ui_telaMain_label_set_L1, &lv_font_montserratMedium_14, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_opa(ui->ui_telaMain_label_set_L1, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_letter_space(ui->ui_telaMain_label_set_L1, 2, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_line_space(ui->ui_telaMain_label_set_L1, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_align(ui->ui_telaMain_label_set_L1, LV_TEXT_ALIGN_CENTER, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_opa(ui->ui_telaMain_label_set_L1, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_top(ui->ui_telaMain_label_set_L1, 8, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_right(ui->ui_telaMain_label_set_L1, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_bottom(ui->ui_telaMain_label_set_L1, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_left(ui->ui_telaMain_label_set_L1, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_shadow_width(ui->ui_telaMain_label_set_L1, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+    //Write codes ui_telaMain_label_saida_L1
+    ui->ui_telaMain_label_saida_L1 = lv_label_create(ui->ui_telaMain_cont_L1);
+    lv_label_set_text(ui->ui_telaMain_label_saida_L1, "Saida:");
+    lv_label_set_long_mode(ui->ui_telaMain_label_saida_L1, LV_LABEL_LONG_WRAP);
+    lv_obj_set_pos(ui->ui_telaMain_label_saida_L1, 1, 36);
+    lv_obj_set_size(ui->ui_telaMain_label_saida_L1, 60, 30);
+
+    //Write style for ui_telaMain_label_saida_L1, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+    lv_obj_set_style_border_width(ui->ui_telaMain_label_saida_L1, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_radius(ui->ui_telaMain_label_saida_L1, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_color(ui->ui_telaMain_label_saida_L1, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_font(ui->ui_telaMain_label_saida_L1, &lv_font_montserratMedium_12, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_opa(ui->ui_telaMain_label_saida_L1, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_letter_space(ui->ui_telaMain_label_saida_L1, 2, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_line_space(ui->ui_telaMain_label_saida_L1, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_align(ui->ui_telaMain_label_saida_L1, LV_TEXT_ALIGN_CENTER, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_opa(ui->ui_telaMain_label_saida_L1, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_top(ui->ui_telaMain_label_saida_L1, 8, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_right(ui->ui_telaMain_label_saida_L1, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_bottom(ui->ui_telaMain_label_saida_L1, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_left(ui->ui_telaMain_label_saida_L1, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_shadow_width(ui->ui_telaMain_label_saida_L1, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+    //Write codes ui_telaMain_lbDisplayL1
+    ui->ui_telaMain_lbDisplayL1 = lv_label_create(ui->ui_telaMain_cont_L1);
+    lv_label_set_text(ui->ui_telaMain_lbDisplayL1, "0.0");
+    lv_label_set_long_mode(ui->ui_telaMain_lbDisplayL1, LV_LABEL_LONG_WRAP);
+    lv_obj_set_pos(ui->ui_telaMain_lbDisplayL1, 36, -5);
+    lv_obj_set_size(ui->ui_telaMain_lbDisplayL1, 144, 82);
+
+    //Write style for ui_telaMain_lbDisplayL1, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+    lv_obj_set_style_border_width(ui->ui_telaMain_lbDisplayL1, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_radius(ui->ui_telaMain_lbDisplayL1, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_color(ui->ui_telaMain_lbDisplayL1, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_font(ui->ui_telaMain_lbDisplayL1, &lv_font_Antonio_Regular_56, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_opa(ui->ui_telaMain_lbDisplayL1, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_letter_space(ui->ui_telaMain_lbDisplayL1, 2, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_line_space(ui->ui_telaMain_lbDisplayL1, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_align(ui->ui_telaMain_lbDisplayL1, LV_TEXT_ALIGN_CENTER, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_opa(ui->ui_telaMain_lbDisplayL1, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_top(ui->ui_telaMain_lbDisplayL1, 8, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_right(ui->ui_telaMain_lbDisplayL1, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_bottom(ui->ui_telaMain_lbDisplayL1, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_left(ui->ui_telaMain_lbDisplayL1, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_shadow_width(ui->ui_telaMain_lbDisplayL1, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+    //Write codes ui_telaMain_lbCorrenteL1
+    ui->ui_telaMain_lbCorrenteL1 = lv_label_create(ui->ui_telaMain_cont_L1);
+    lv_label_set_text(ui->ui_telaMain_lbCorrenteL1, "123,4");
+    lv_label_set_long_mode(ui->ui_telaMain_lbCorrenteL1, LV_LABEL_LONG_WRAP);
+    lv_obj_set_pos(ui->ui_telaMain_lbCorrenteL1, 1, 68);
+    lv_obj_set_size(ui->ui_telaMain_lbCorrenteL1, 73, 33);
+
+    //Write style for ui_telaMain_lbCorrenteL1, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+    lv_obj_set_style_border_width(ui->ui_telaMain_lbCorrenteL1, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_radius(ui->ui_telaMain_lbCorrenteL1, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_color(ui->ui_telaMain_lbCorrenteL1, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_font(ui->ui_telaMain_lbCorrenteL1, &lv_font_Antonio_Regular_20, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_opa(ui->ui_telaMain_lbCorrenteL1, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_letter_space(ui->ui_telaMain_lbCorrenteL1, 2, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_line_space(ui->ui_telaMain_lbCorrenteL1, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_align(ui->ui_telaMain_lbCorrenteL1, LV_TEXT_ALIGN_CENTER, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_opa(ui->ui_telaMain_lbCorrenteL1, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_top(ui->ui_telaMain_lbCorrenteL1, 8, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_right(ui->ui_telaMain_lbCorrenteL1, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_bottom(ui->ui_telaMain_lbCorrenteL1, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_left(ui->ui_telaMain_lbCorrenteL1, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_shadow_width(ui->ui_telaMain_lbCorrenteL1, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+    //Write codes ui_telaMain_lbFatorL1
+    ui->ui_telaMain_lbFatorL1 = lv_label_create(ui->ui_telaMain_cont_L1);
+    lv_label_set_text(ui->ui_telaMain_lbFatorL1, "-0,99");
+    lv_label_set_long_mode(ui->ui_telaMain_lbFatorL1, LV_LABEL_LONG_WRAP);
+    lv_obj_set_pos(ui->ui_telaMain_lbFatorL1, 130, 68);
+    lv_obj_set_size(ui->ui_telaMain_lbFatorL1, 73, 33);
+
+    //Write style for ui_telaMain_lbFatorL1, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+    lv_obj_set_style_border_width(ui->ui_telaMain_lbFatorL1, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_radius(ui->ui_telaMain_lbFatorL1, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_color(ui->ui_telaMain_lbFatorL1, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_font(ui->ui_telaMain_lbFatorL1, &lv_font_Antonio_Regular_20, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_opa(ui->ui_telaMain_lbFatorL1, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_letter_space(ui->ui_telaMain_lbFatorL1, 2, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_line_space(ui->ui_telaMain_lbFatorL1, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_align(ui->ui_telaMain_lbFatorL1, LV_TEXT_ALIGN_CENTER, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_opa(ui->ui_telaMain_lbFatorL1, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_top(ui->ui_telaMain_lbFatorL1, 8, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_right(ui->ui_telaMain_lbFatorL1, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_bottom(ui->ui_telaMain_lbFatorL1, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_left(ui->ui_telaMain_lbFatorL1, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_shadow_width(ui->ui_telaMain_lbFatorL1, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+    //Write codes ui_telaMain_lbSetL1
+    ui->ui_telaMain_lbSetL1 = lv_label_create(ui->ui_telaMain_cont_L1);
+    lv_label_set_text(ui->ui_telaMain_lbSetL1, "0.0%");
+    lv_label_set_long_mode(ui->ui_telaMain_lbSetL1, LV_LABEL_LONG_WRAP);
+    lv_obj_set_pos(ui->ui_telaMain_lbSetL1, 53, 99);
+    lv_obj_set_size(ui->ui_telaMain_lbSetL1, 73, 33);
+
+    //Write style for ui_telaMain_lbSetL1, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+    lv_obj_set_style_border_width(ui->ui_telaMain_lbSetL1, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_radius(ui->ui_telaMain_lbSetL1, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_color(ui->ui_telaMain_lbSetL1, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_font(ui->ui_telaMain_lbSetL1, &lv_font_Antonio_Regular_20, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_opa(ui->ui_telaMain_lbSetL1, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_letter_space(ui->ui_telaMain_lbSetL1, 2, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_line_space(ui->ui_telaMain_lbSetL1, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_align(ui->ui_telaMain_lbSetL1, LV_TEXT_ALIGN_CENTER, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_opa(ui->ui_telaMain_lbSetL1, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_top(ui->ui_telaMain_lbSetL1, 8, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_right(ui->ui_telaMain_lbSetL1, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_bottom(ui->ui_telaMain_lbSetL1, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_left(ui->ui_telaMain_lbSetL1, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_shadow_width(ui->ui_telaMain_lbSetL1, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+    //Write codes ui_telaMain_cbHabL1
+    ui->ui_telaMain_cbHabL1 = lv_checkbox_create(ui->ui_telaMain_cont_L1);
+    lv_checkbox_set_text(ui->ui_telaMain_cbHabL1, "HAB");
+    lv_obj_set_pos(ui->ui_telaMain_cbHabL1, 122, 107);
+    lv_obj_add_state(ui->ui_telaMain_cbHabL1, LV_STATE_CHECKED);
+
+    //Write style for ui_telaMain_cbHabL1, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+    lv_obj_set_style_pad_top(ui->ui_telaMain_cbHabL1, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_left(ui->ui_telaMain_cbHabL1, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_right(ui->ui_telaMain_cbHabL1, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_bottom(ui->ui_telaMain_cbHabL1, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_color(ui->ui_telaMain_cbHabL1, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_font(ui->ui_telaMain_cbHabL1, &lv_font_montserratMedium_12, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_opa(ui->ui_telaMain_cbHabL1, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_letter_space(ui->ui_telaMain_cbHabL1, 2, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_width(ui->ui_telaMain_cbHabL1, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_radius(ui->ui_telaMain_cbHabL1, 6, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_opa(ui->ui_telaMain_cbHabL1, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_color(ui->ui_telaMain_cbHabL1, lv_color_hex(0x5a5b5b), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_grad_dir(ui->ui_telaMain_cbHabL1, LV_GRAD_DIR_HOR, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_grad_color(ui->ui_telaMain_cbHabL1, lv_color_hex(0x5a5b5b), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_main_stop(ui->ui_telaMain_cbHabL1, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_grad_stop(ui->ui_telaMain_cbHabL1, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_shadow_width(ui->ui_telaMain_cbHabL1, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+    //Write style for ui_telaMain_cbHabL1, Part: LV_PART_INDICATOR, State: LV_STATE_DEFAULT.
+    lv_obj_set_style_pad_all(ui->ui_telaMain_cbHabL1, 3, LV_PART_INDICATOR|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_width(ui->ui_telaMain_cbHabL1, 2, LV_PART_INDICATOR|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_opa(ui->ui_telaMain_cbHabL1, 255, LV_PART_INDICATOR|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_color(ui->ui_telaMain_cbHabL1, lv_color_hex(0x2195f6), LV_PART_INDICATOR|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_side(ui->ui_telaMain_cbHabL1, LV_BORDER_SIDE_FULL, LV_PART_INDICATOR|LV_STATE_DEFAULT);
+    lv_obj_set_style_radius(ui->ui_telaMain_cbHabL1, 6, LV_PART_INDICATOR|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_opa(ui->ui_telaMain_cbHabL1, 255, LV_PART_INDICATOR|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_color(ui->ui_telaMain_cbHabL1, lv_color_hex(0xffffff), LV_PART_INDICATOR|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_grad_dir(ui->ui_telaMain_cbHabL1, LV_GRAD_DIR_NONE, LV_PART_INDICATOR|LV_STATE_DEFAULT);
+
+//---------------------------------------------------------------------------------------------------------------------
+
+    //Write codes ui_telaMain_cont_L2
+    ui->ui_telaMain_cont_L2 = lv_obj_create(ui->ui_telaMain_dashboard);
+    lv_obj_set_pos(ui->ui_telaMain_cont_L2, 209, 1);
+    lv_obj_set_size(ui->ui_telaMain_cont_L2, 205, 142);
+    lv_obj_set_scrollbar_mode(ui->ui_telaMain_cont_L2, LV_SCROLLBAR_MODE_OFF);
+    lv_obj_clear_flag(ui->ui_telaMain_cont_L2, LV_OBJ_FLAG_SCROLLABLE); //TIRAR SCROLL DO CONTAINER
+
+    //Write style for ui_telaMain_cont_L2, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+    lv_obj_set_style_border_width(ui->ui_telaMain_cont_L2, 5, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_opa(ui->ui_telaMain_cont_L2, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_color(ui->ui_telaMain_cont_L2, lv_color_hex(0x1fdc2a), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_side(ui->ui_telaMain_cont_L2, LV_BORDER_SIDE_FULL, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_radius(ui->ui_telaMain_cont_L2, 35, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_opa(ui->ui_telaMain_cont_L2, 250, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_color(ui->ui_telaMain_cont_L2, lv_color_hex(0x242424), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_grad_dir(ui->ui_telaMain_cont_L2, LV_GRAD_DIR_NONE, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_top(ui->ui_telaMain_cont_L2, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_bottom(ui->ui_telaMain_cont_L2, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_left(ui->ui_telaMain_cont_L2, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_right(ui->ui_telaMain_cont_L2, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_shadow_width(ui->ui_telaMain_cont_L2, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+    //Write codes ui_telaMain_label_L2
+    ui->ui_telaMain_label_L2 = lv_label_create(ui->ui_telaMain_cont_L2);
+    lv_label_set_text(ui->ui_telaMain_label_L2, "L2");
+    lv_label_set_long_mode(ui->ui_telaMain_label_L2, LV_LABEL_LONG_WRAP);
+    lv_obj_set_pos(ui->ui_telaMain_label_L2, 10, 10);
+    lv_obj_set_size(ui->ui_telaMain_label_L2, 35, 31);
+
+    //Write style for ui_telaMain_label_L2, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+    lv_obj_set_style_border_width(ui->ui_telaMain_label_L2, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_radius(ui->ui_telaMain_label_L2, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_color(ui->ui_telaMain_label_L2, lv_color_hex(0x52DAFF), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_font(ui->ui_telaMain_label_L2, &lv_font_Antonio_Regular_18, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_opa(ui->ui_telaMain_label_L2, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_letter_space(ui->ui_telaMain_label_L2, 2, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_line_space(ui->ui_telaMain_label_L2, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_align(ui->ui_telaMain_label_L2, LV_TEXT_ALIGN_CENTER, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_opa(ui->ui_telaMain_label_L2, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_top(ui->ui_telaMain_label_L2, 8, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_right(ui->ui_telaMain_label_L2, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_bottom(ui->ui_telaMain_label_L2, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_left(ui->ui_telaMain_label_L2, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_shadow_width(ui->ui_telaMain_label_L2, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+    //Write codes ui_telaMain_label_v_L2
+    ui->ui_telaMain_label_v_L2 = lv_label_create(ui->ui_telaMain_cont_L2);
+    lv_label_set_text(ui->ui_telaMain_label_v_L2, "V");
+    lv_label_set_long_mode(ui->ui_telaMain_label_v_L2, LV_LABEL_LONG_WRAP);
+    lv_obj_set_pos(ui->ui_telaMain_label_v_L2, 155, 24);
+    lv_obj_set_size(ui->ui_telaMain_label_v_L2, 45, 42);
+
+    //Write style for ui_telaMain_label_v_L2, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+    lv_obj_set_style_border_width(ui->ui_telaMain_label_v_L2, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_radius(ui->ui_telaMain_label_v_L2, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_color(ui->ui_telaMain_label_v_L2, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_font(ui->ui_telaMain_label_v_L2, &lv_font_Alatsi_Regular_26, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_opa(ui->ui_telaMain_label_v_L2, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_letter_space(ui->ui_telaMain_label_v_L2, 2, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_line_space(ui->ui_telaMain_label_v_L2, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_align(ui->ui_telaMain_label_v_L2, LV_TEXT_ALIGN_CENTER, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_opa(ui->ui_telaMain_label_v_L2, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_top(ui->ui_telaMain_label_v_L2, 8, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_right(ui->ui_telaMain_label_v_L2, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_bottom(ui->ui_telaMain_label_v_L2, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_left(ui->ui_telaMain_label_v_L2, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_shadow_width(ui->ui_telaMain_label_v_L2, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+    //Write codes ui_telaMain_label_mA_L2
+    ui->ui_telaMain_label_mA_L2 = lv_label_create(ui->ui_telaMain_cont_L2);
+    lv_label_set_text(ui->ui_telaMain_label_mA_L2, "mA");
+    lv_label_set_long_mode(ui->ui_telaMain_label_mA_L2, LV_LABEL_LONG_WRAP);
+    lv_obj_set_pos(ui->ui_telaMain_label_mA_L2, 56, 68);
+    lv_obj_set_size(ui->ui_telaMain_label_mA_L2, 45, 33);
+
+    //Write style for ui_telaMain_label_mA_L2, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+    lv_obj_set_style_border_width(ui->ui_telaMain_label_mA_L2, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_radius(ui->ui_telaMain_label_mA_L2, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_color(ui->ui_telaMain_label_mA_L2, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_font(ui->ui_telaMain_label_mA_L2, &lv_font_Alatsi_Regular_18, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_opa(ui->ui_telaMain_label_mA_L2, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_letter_space(ui->ui_telaMain_label_mA_L2, 2, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_line_space(ui->ui_telaMain_label_mA_L2, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_align(ui->ui_telaMain_label_mA_L2, LV_TEXT_ALIGN_CENTER, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_opa(ui->ui_telaMain_label_mA_L2, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_top(ui->ui_telaMain_label_mA_L2, 8, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_right(ui->ui_telaMain_label_mA_L2, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_bottom(ui->ui_telaMain_label_mA_L2, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_left(ui->ui_telaMain_label_mA_L2, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_shadow_width(ui->ui_telaMain_label_mA_L2, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+    //Write codes ui_telaMain_label_fp_L2
+    ui->ui_telaMain_label_fp_L2 = lv_label_create(ui->ui_telaMain_cont_L2);
+    lv_label_set_text(ui->ui_telaMain_label_fp_L2, "FP:");
+    lv_label_set_long_mode(ui->ui_telaMain_label_fp_L2, LV_LABEL_LONG_WRAP);
+    lv_obj_set_pos(ui->ui_telaMain_label_fp_L2, 101, 68);
+    lv_obj_set_size(ui->ui_telaMain_label_fp_L2, 45, 33);
+
+    //Write style for ui_telaMain_label_fp_L2, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+    lv_obj_set_style_border_width(ui->ui_telaMain_label_fp_L2, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_radius(ui->ui_telaMain_label_fp_L2, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_color(ui->ui_telaMain_label_fp_L2, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_font(ui->ui_telaMain_label_fp_L2, &lv_font_montserratMedium_18, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_opa(ui->ui_telaMain_label_fp_L2, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_letter_space(ui->ui_telaMain_label_fp_L2, 2, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_line_space(ui->ui_telaMain_label_fp_L2, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_align(ui->ui_telaMain_label_fp_L2, LV_TEXT_ALIGN_CENTER, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_opa(ui->ui_telaMain_label_fp_L2, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_top(ui->ui_telaMain_label_fp_L2, 8, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_right(ui->ui_telaMain_label_fp_L2, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_bottom(ui->ui_telaMain_label_fp_L2, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_left(ui->ui_telaMain_label_fp_L2, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_shadow_width(ui->ui_telaMain_label_fp_L2, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+    //Write codes ui_telaMain_linhaSup_L2
+    ui->ui_telaMain_linhaSup_L2 = lv_line_create(ui->ui_telaMain_cont_L2);
+    static lv_point_t ui_telaMain_linhaSup_L2[] = {{0, 0},{600, 0},};
+    lv_line_set_points(ui->ui_telaMain_linhaSup_L2, ui_telaMain_linhaSup_L2, 2);
+    lv_obj_set_pos(ui->ui_telaMain_linhaSup_L2, 6, 68);
+    lv_obj_set_size(ui->ui_telaMain_linhaSup_L2, 186, 4);
+
+    //Write style for ui_telaMain_linhaSup_L2, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+    lv_obj_set_style_line_width(ui->ui_telaMain_linhaSup_L2, 2, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_line_color(ui->ui_telaMain_linhaSup_L2, lv_color_hex(0x656461), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_line_opa(ui->ui_telaMain_linhaSup_L2, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+    //Write codes ui_telaMain_linhaInf_L2
+    ui->ui_telaMain_linhaInf_L2 = lv_line_create(ui->ui_telaMain_cont_L2);
+    static lv_point_t ui_telaMain_linhaInf_L2[] = {{0, 0},{600, 0},};
+    lv_line_set_points(ui->ui_telaMain_linhaInf_L2, ui_telaMain_linhaInf_L2, 2);
+    lv_obj_set_pos(ui->ui_telaMain_linhaInf_L2, 4, 100);
+    lv_obj_set_size(ui->ui_telaMain_linhaInf_L2, 186, 4);
+
+    //Write style for ui_telaMain_linhaInf_L2, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+    lv_obj_set_style_line_width(ui->ui_telaMain_linhaInf_L2, 2, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_line_color(ui->ui_telaMain_linhaInf_L2, lv_color_hex(0x656461), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_line_opa(ui->ui_telaMain_linhaInf_L2, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+    //Write codes ui_telaMain_label_set_L2
+    ui->ui_telaMain_label_set_L2 = lv_label_create(ui->ui_telaMain_cont_L2);
+    lv_label_set_text(ui->ui_telaMain_label_set_L2, "SET:");
+    lv_label_set_long_mode(ui->ui_telaMain_label_set_L2, LV_LABEL_LONG_WRAP);
+    lv_obj_set_pos(ui->ui_telaMain_label_set_L2, 4, 101);
+    lv_obj_set_size(ui->ui_telaMain_label_set_L2, 60, 30);
+
+    //Write style for ui_telaMain_label_set_L2, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+    lv_obj_set_style_border_width(ui->ui_telaMain_label_set_L2, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_radius(ui->ui_telaMain_label_set_L2, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_color(ui->ui_telaMain_label_set_L2, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_font(ui->ui_telaMain_label_set_L2, &lv_font_montserratMedium_14, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_opa(ui->ui_telaMain_label_set_L2, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_letter_space(ui->ui_telaMain_label_set_L2, 2, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_line_space(ui->ui_telaMain_label_set_L2, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_align(ui->ui_telaMain_label_set_L2, LV_TEXT_ALIGN_CENTER, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_opa(ui->ui_telaMain_label_set_L2, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_top(ui->ui_telaMain_label_set_L2, 8, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_right(ui->ui_telaMain_label_set_L2, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_bottom(ui->ui_telaMain_label_set_L2, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_left(ui->ui_telaMain_label_set_L2, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_shadow_width(ui->ui_telaMain_label_set_L2, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+    //Write codes ui_telaMain_label_saida_L2
+    ui->ui_telaMain_label_saida_L2 = lv_label_create(ui->ui_telaMain_cont_L2);
+    lv_label_set_text(ui->ui_telaMain_label_saida_L2, "Saida:");
+    lv_label_set_long_mode(ui->ui_telaMain_label_saida_L2, LV_LABEL_LONG_WRAP);
+    lv_obj_set_pos(ui->ui_telaMain_label_saida_L2, 1, 36);
+    lv_obj_set_size(ui->ui_telaMain_label_saida_L2, 60, 30);
+
+    //Write style for ui_telaMain_label_saida_L2, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+    lv_obj_set_style_border_width(ui->ui_telaMain_label_saida_L2, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_radius(ui->ui_telaMain_label_saida_L2, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_color(ui->ui_telaMain_label_saida_L2, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_font(ui->ui_telaMain_label_saida_L2, &lv_font_montserratMedium_12, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_opa(ui->ui_telaMain_label_saida_L2, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_letter_space(ui->ui_telaMain_label_saida_L2, 2, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_line_space(ui->ui_telaMain_label_saida_L2, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_align(ui->ui_telaMain_label_saida_L2, LV_TEXT_ALIGN_CENTER, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_opa(ui->ui_telaMain_label_saida_L2, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_top(ui->ui_telaMain_label_saida_L2, 8, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_right(ui->ui_telaMain_label_saida_L2, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_bottom(ui->ui_telaMain_label_saida_L2, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_left(ui->ui_telaMain_label_saida_L2, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_shadow_width(ui->ui_telaMain_label_saida_L2, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+    //Write codes ui_telaMain_lbDisplayL2
+    ui->ui_telaMain_lbDisplayL2 = lv_label_create(ui->ui_telaMain_cont_L2);
+    lv_label_set_text(ui->ui_telaMain_lbDisplayL2, "0.0");
+    lv_label_set_long_mode(ui->ui_telaMain_lbDisplayL2, LV_LABEL_LONG_WRAP);
+    lv_obj_set_pos(ui->ui_telaMain_lbDisplayL2, 36, -5);
+    lv_obj_set_size(ui->ui_telaMain_lbDisplayL2, 144, 82);
+
+    //Write style for ui_telaMain_lbDisplayL2, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+    lv_obj_set_style_border_width(ui->ui_telaMain_lbDisplayL2, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_radius(ui->ui_telaMain_lbDisplayL2, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_color(ui->ui_telaMain_lbDisplayL2, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_font(ui->ui_telaMain_lbDisplayL2, &lv_font_Antonio_Regular_56, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_opa(ui->ui_telaMain_lbDisplayL2, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_letter_space(ui->ui_telaMain_lbDisplayL2, 2, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_line_space(ui->ui_telaMain_lbDisplayL2, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_align(ui->ui_telaMain_lbDisplayL2, LV_TEXT_ALIGN_CENTER, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_opa(ui->ui_telaMain_lbDisplayL2, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_top(ui->ui_telaMain_lbDisplayL2, 8, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_right(ui->ui_telaMain_lbDisplayL2, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_bottom(ui->ui_telaMain_lbDisplayL2, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_left(ui->ui_telaMain_lbDisplayL2, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_shadow_width(ui->ui_telaMain_lbDisplayL2, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+    //Write codes ui_telaMain_lbCorrenteL2
+    ui->ui_telaMain_lbCorrenteL2 = lv_label_create(ui->ui_telaMain_cont_L2);
+    lv_label_set_text(ui->ui_telaMain_lbCorrenteL2, "123,4");
+    lv_label_set_long_mode(ui->ui_telaMain_lbCorrenteL2, LV_LABEL_LONG_WRAP);
+    lv_obj_set_pos(ui->ui_telaMain_lbCorrenteL2, 1, 68);
+    lv_obj_set_size(ui->ui_telaMain_lbCorrenteL2, 73, 33);
+
+    //Write style for ui_telaMain_lbCorrenteL2, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+    lv_obj_set_style_border_width(ui->ui_telaMain_lbCorrenteL2, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_radius(ui->ui_telaMain_lbCorrenteL2, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_color(ui->ui_telaMain_lbCorrenteL2, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_font(ui->ui_telaMain_lbCorrenteL2, &lv_font_Antonio_Regular_20, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_opa(ui->ui_telaMain_lbCorrenteL2, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_letter_space(ui->ui_telaMain_lbCorrenteL2, 2, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_line_space(ui->ui_telaMain_lbCorrenteL2, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_align(ui->ui_telaMain_lbCorrenteL2, LV_TEXT_ALIGN_CENTER, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_opa(ui->ui_telaMain_lbCorrenteL2, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_top(ui->ui_telaMain_lbCorrenteL2, 8, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_right(ui->ui_telaMain_lbCorrenteL2, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_bottom(ui->ui_telaMain_lbCorrenteL2, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_left(ui->ui_telaMain_lbCorrenteL2, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_shadow_width(ui->ui_telaMain_lbCorrenteL2, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+    //Write codes ui_telaMain_lbFatorL2
+    ui->ui_telaMain_lbFatorL2 = lv_label_create(ui->ui_telaMain_cont_L2);
+    lv_label_set_text(ui->ui_telaMain_lbFatorL2, "-0,99");
+    lv_label_set_long_mode(ui->ui_telaMain_lbFatorL2, LV_LABEL_LONG_WRAP);
+    lv_obj_set_pos(ui->ui_telaMain_lbFatorL2, 130, 68);
+    lv_obj_set_size(ui->ui_telaMain_lbFatorL2, 73, 33);
+
+    //Write style for ui_telaMain_lbFatorL2, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+    lv_obj_set_style_border_width(ui->ui_telaMain_lbFatorL2, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_radius(ui->ui_telaMain_lbFatorL2, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_color(ui->ui_telaMain_lbFatorL2, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_font(ui->ui_telaMain_lbFatorL2, &lv_font_Antonio_Regular_20, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_opa(ui->ui_telaMain_lbFatorL2, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_letter_space(ui->ui_telaMain_lbFatorL2, 2, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_line_space(ui->ui_telaMain_lbFatorL2, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_align(ui->ui_telaMain_lbFatorL2, LV_TEXT_ALIGN_CENTER, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_opa(ui->ui_telaMain_lbFatorL2, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_top(ui->ui_telaMain_lbFatorL2, 8, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_right(ui->ui_telaMain_lbFatorL2, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_bottom(ui->ui_telaMain_lbFatorL2, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_left(ui->ui_telaMain_lbFatorL2, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_shadow_width(ui->ui_telaMain_lbFatorL2, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+    //Write codes ui_telaMain_lbSetL2
+    ui->ui_telaMain_lbSetL2 = lv_label_create(ui->ui_telaMain_cont_L2);
+    lv_label_set_text(ui->ui_telaMain_lbSetL2, "0.0%");
+    lv_label_set_long_mode(ui->ui_telaMain_lbSetL2, LV_LABEL_LONG_WRAP);
+    lv_obj_set_pos(ui->ui_telaMain_lbSetL2, 53, 99);
+    lv_obj_set_size(ui->ui_telaMain_lbSetL2, 73, 33);
+
+    //Write style for ui_telaMain_lbSetL2, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+    lv_obj_set_style_border_width(ui->ui_telaMain_lbSetL2, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_radius(ui->ui_telaMain_lbSetL2, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_color(ui->ui_telaMain_lbSetL2, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_font(ui->ui_telaMain_lbSetL2, &lv_font_Antonio_Regular_20, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_opa(ui->ui_telaMain_lbSetL2, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_letter_space(ui->ui_telaMain_lbSetL2, 2, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_line_space(ui->ui_telaMain_lbSetL2, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_align(ui->ui_telaMain_lbSetL2, LV_TEXT_ALIGN_CENTER, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_opa(ui->ui_telaMain_lbSetL2, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_top(ui->ui_telaMain_lbSetL2, 8, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_right(ui->ui_telaMain_lbSetL2, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_bottom(ui->ui_telaMain_lbSetL2, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_left(ui->ui_telaMain_lbSetL2, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_shadow_width(ui->ui_telaMain_lbSetL2, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+    //Write codes ui_telaMain_cbHabL2
+    ui->ui_telaMain_cbHabL2 = lv_checkbox_create(ui->ui_telaMain_cont_L2);
+    lv_checkbox_set_text(ui->ui_telaMain_cbHabL2, "HAB");
+    lv_obj_set_pos(ui->ui_telaMain_cbHabL2, 122, 107);
+    lv_obj_add_state(ui->ui_telaMain_cbHabL2, LV_STATE_CHECKED);
+
+    //Write style for ui_telaMain_cbHabL2, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+    lv_obj_set_style_pad_top(ui->ui_telaMain_cbHabL2, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_left(ui->ui_telaMain_cbHabL2, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_right(ui->ui_telaMain_cbHabL2, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_bottom(ui->ui_telaMain_cbHabL2, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_color(ui->ui_telaMain_cbHabL2, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_font(ui->ui_telaMain_cbHabL2, &lv_font_montserratMedium_12, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_opa(ui->ui_telaMain_cbHabL2, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_letter_space(ui->ui_telaMain_cbHabL2, 2, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_width(ui->ui_telaMain_cbHabL2, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_radius(ui->ui_telaMain_cbHabL2, 6, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_opa(ui->ui_telaMain_cbHabL2, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_color(ui->ui_telaMain_cbHabL2, lv_color_hex(0x5a5b5b), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_grad_dir(ui->ui_telaMain_cbHabL2, LV_GRAD_DIR_HOR, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_grad_color(ui->ui_telaMain_cbHabL2, lv_color_hex(0x5a5b5b), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_main_stop(ui->ui_telaMain_cbHabL2, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_grad_stop(ui->ui_telaMain_cbHabL2, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_shadow_width(ui->ui_telaMain_cbHabL2, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+    //Write style for ui_telaMain_cbHabL2, Part: LV_PART_INDICATOR, State: LV_STATE_DEFAULT.
+    lv_obj_set_style_pad_all(ui->ui_telaMain_cbHabL2, 3, LV_PART_INDICATOR|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_width(ui->ui_telaMain_cbHabL2, 2, LV_PART_INDICATOR|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_opa(ui->ui_telaMain_cbHabL2, 255, LV_PART_INDICATOR|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_color(ui->ui_telaMain_cbHabL2, lv_color_hex(0x2195f6), LV_PART_INDICATOR|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_side(ui->ui_telaMain_cbHabL2, LV_BORDER_SIDE_FULL, LV_PART_INDICATOR|LV_STATE_DEFAULT);
+    lv_obj_set_style_radius(ui->ui_telaMain_cbHabL2, 6, LV_PART_INDICATOR|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_opa(ui->ui_telaMain_cbHabL2, 255, LV_PART_INDICATOR|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_color(ui->ui_telaMain_cbHabL2, lv_color_hex(0xffffff), LV_PART_INDICATOR|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_grad_dir(ui->ui_telaMain_cbHabL2, LV_GRAD_DIR_NONE, LV_PART_INDICATOR|LV_STATE_DEFAULT);
+
+//---------------------------------------------------------------------------------------------------------------------
+
+    //Write codes ui_telaMain_cont_L3
+    ui->ui_telaMain_cont_L3 = lv_obj_create(ui->ui_telaMain_dashboard);
+    lv_obj_set_pos(ui->ui_telaMain_cont_L3, 420, 1);
+    lv_obj_set_size(ui->ui_telaMain_cont_L3, 205, 142);
+    lv_obj_set_scrollbar_mode(ui->ui_telaMain_cont_L3, LV_SCROLLBAR_MODE_OFF);
+    lv_obj_clear_flag(ui->ui_telaMain_cont_L3, LV_OBJ_FLAG_SCROLLABLE); //TIRAR SCROLL DO CONTAINER
+
+    //Write style for ui_telaMain_cont_L3, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+    lv_obj_set_style_border_width(ui->ui_telaMain_cont_L3, 5, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_opa(ui->ui_telaMain_cont_L3, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_color(ui->ui_telaMain_cont_L3, lv_color_hex(0x1fdc2a), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_side(ui->ui_telaMain_cont_L3, LV_BORDER_SIDE_FULL, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_radius(ui->ui_telaMain_cont_L3, 35, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_opa(ui->ui_telaMain_cont_L3, 250, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_color(ui->ui_telaMain_cont_L3, lv_color_hex(0x242424), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_grad_dir(ui->ui_telaMain_cont_L3, LV_GRAD_DIR_NONE, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_top(ui->ui_telaMain_cont_L3, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_bottom(ui->ui_telaMain_cont_L3, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_left(ui->ui_telaMain_cont_L3, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_right(ui->ui_telaMain_cont_L3, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_shadow_width(ui->ui_telaMain_cont_L3, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+    //Write codes ui_telaMain_label_L3
+    ui->ui_telaMain_label_L3 = lv_label_create(ui->ui_telaMain_cont_L3);
+    lv_label_set_text(ui->ui_telaMain_label_L3, "L3");
+    lv_label_set_long_mode(ui->ui_telaMain_label_L3, LV_LABEL_LONG_WRAP);
+    lv_obj_set_pos(ui->ui_telaMain_label_L3, 10, 10);
+    lv_obj_set_size(ui->ui_telaMain_label_L3, 35, 31);
+
+    //Write style for ui_telaMain_label_L3, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+    lv_obj_set_style_border_width(ui->ui_telaMain_label_L3, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_radius(ui->ui_telaMain_label_L3, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_color(ui->ui_telaMain_label_L3, lv_color_hex(0x52DAFF), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_font(ui->ui_telaMain_label_L3, &lv_font_Antonio_Regular_18, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_opa(ui->ui_telaMain_label_L3, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_letter_space(ui->ui_telaMain_label_L3, 2, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_line_space(ui->ui_telaMain_label_L3, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_align(ui->ui_telaMain_label_L3, LV_TEXT_ALIGN_CENTER, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_opa(ui->ui_telaMain_label_L3, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_top(ui->ui_telaMain_label_L3, 8, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_right(ui->ui_telaMain_label_L3, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_bottom(ui->ui_telaMain_label_L3, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_left(ui->ui_telaMain_label_L3, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_shadow_width(ui->ui_telaMain_label_L3, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+    //Write codes ui_telaMain_label_v_L3
+    ui->ui_telaMain_label_v_L3 = lv_label_create(ui->ui_telaMain_cont_L3);
+    lv_label_set_text(ui->ui_telaMain_label_v_L3, "V");
+    lv_label_set_long_mode(ui->ui_telaMain_label_v_L3, LV_LABEL_LONG_WRAP);
+    lv_obj_set_pos(ui->ui_telaMain_label_v_L3, 155, 24);
+    lv_obj_set_size(ui->ui_telaMain_label_v_L3, 45, 42);
+
+    //Write style for ui_telaMain_label_v_L3, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+    lv_obj_set_style_border_width(ui->ui_telaMain_label_v_L3, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_radius(ui->ui_telaMain_label_v_L3, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_color(ui->ui_telaMain_label_v_L3, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_font(ui->ui_telaMain_label_v_L3, &lv_font_Alatsi_Regular_26, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_opa(ui->ui_telaMain_label_v_L3, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_letter_space(ui->ui_telaMain_label_v_L3, 2, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_line_space(ui->ui_telaMain_label_v_L3, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_align(ui->ui_telaMain_label_v_L3, LV_TEXT_ALIGN_CENTER, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_opa(ui->ui_telaMain_label_v_L3, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_top(ui->ui_telaMain_label_v_L3, 8, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_right(ui->ui_telaMain_label_v_L3, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_bottom(ui->ui_telaMain_label_v_L3, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_left(ui->ui_telaMain_label_v_L3, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_shadow_width(ui->ui_telaMain_label_v_L3, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+    //Write codes ui_telaMain_label_mA_L3
+    ui->ui_telaMain_label_mA_L3 = lv_label_create(ui->ui_telaMain_cont_L3);
+    lv_label_set_text(ui->ui_telaMain_label_mA_L3, "mA");
+    lv_label_set_long_mode(ui->ui_telaMain_label_mA_L3, LV_LABEL_LONG_WRAP);
+    lv_obj_set_pos(ui->ui_telaMain_label_mA_L3, 56, 68);
+    lv_obj_set_size(ui->ui_telaMain_label_mA_L3, 45, 33);
+
+    //Write style for ui_telaMain_label_mA_L3, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+    lv_obj_set_style_border_width(ui->ui_telaMain_label_mA_L3, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_radius(ui->ui_telaMain_label_mA_L3, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_color(ui->ui_telaMain_label_mA_L3, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_font(ui->ui_telaMain_label_mA_L3, &lv_font_Alatsi_Regular_18, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_opa(ui->ui_telaMain_label_mA_L3, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_letter_space(ui->ui_telaMain_label_mA_L3, 2, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_line_space(ui->ui_telaMain_label_mA_L3, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_align(ui->ui_telaMain_label_mA_L3, LV_TEXT_ALIGN_CENTER, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_opa(ui->ui_telaMain_label_mA_L3, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_top(ui->ui_telaMain_label_mA_L3, 8, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_right(ui->ui_telaMain_label_mA_L3, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_bottom(ui->ui_telaMain_label_mA_L3, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_left(ui->ui_telaMain_label_mA_L3, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_shadow_width(ui->ui_telaMain_label_mA_L3, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+    //Write codes ui_telaMain_label_fp_L3
+    ui->ui_telaMain_label_fp_L3 = lv_label_create(ui->ui_telaMain_cont_L3);
+    lv_label_set_text(ui->ui_telaMain_label_fp_L3, "FP:");
+    lv_label_set_long_mode(ui->ui_telaMain_label_fp_L3, LV_LABEL_LONG_WRAP);
+    lv_obj_set_pos(ui->ui_telaMain_label_fp_L3, 101, 68);
+    lv_obj_set_size(ui->ui_telaMain_label_fp_L3, 45, 33);
+
+    //Write style for ui_telaMain_label_fp_L3, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+    lv_obj_set_style_border_width(ui->ui_telaMain_label_fp_L3, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_radius(ui->ui_telaMain_label_fp_L3, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_color(ui->ui_telaMain_label_fp_L3, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_font(ui->ui_telaMain_label_fp_L3, &lv_font_montserratMedium_18, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_opa(ui->ui_telaMain_label_fp_L3, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_letter_space(ui->ui_telaMain_label_fp_L3, 2, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_line_space(ui->ui_telaMain_label_fp_L3, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_align(ui->ui_telaMain_label_fp_L3, LV_TEXT_ALIGN_CENTER, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_opa(ui->ui_telaMain_label_fp_L3, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_top(ui->ui_telaMain_label_fp_L3, 8, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_right(ui->ui_telaMain_label_fp_L3, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_bottom(ui->ui_telaMain_label_fp_L3, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_left(ui->ui_telaMain_label_fp_L3, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_shadow_width(ui->ui_telaMain_label_fp_L3, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+    //Write codes ui_telaMain_linhaSup_L3
+    ui->ui_telaMain_linhaSup_L3 = lv_line_create(ui->ui_telaMain_cont_L3);
+    static lv_point_t ui_telaMain_linhaSup_L3[] = {{0, 0},{600, 0},};
+    lv_line_set_points(ui->ui_telaMain_linhaSup_L3, ui_telaMain_linhaSup_L3, 2);
+    lv_obj_set_pos(ui->ui_telaMain_linhaSup_L3, 6, 68);
+    lv_obj_set_size(ui->ui_telaMain_linhaSup_L3, 186, 4);
+
+    //Write style for ui_telaMain_linhaSup_L3, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+    lv_obj_set_style_line_width(ui->ui_telaMain_linhaSup_L3, 2, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_line_color(ui->ui_telaMain_linhaSup_L3, lv_color_hex(0x656461), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_line_opa(ui->ui_telaMain_linhaSup_L3, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+    //Write codes ui_telaMain_linhaInf_L3
+    ui->ui_telaMain_linhaInf_L3 = lv_line_create(ui->ui_telaMain_cont_L3);
+    static lv_point_t ui_telaMain_linhaInf_L3[] = {{0, 0},{600, 0},};
+    lv_line_set_points(ui->ui_telaMain_linhaInf_L3, ui_telaMain_linhaInf_L3, 2);
+    lv_obj_set_pos(ui->ui_telaMain_linhaInf_L3, 4, 100);
+    lv_obj_set_size(ui->ui_telaMain_linhaInf_L3, 186, 4);
+
+    //Write style for ui_telaMain_linhaInf_L3, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+    lv_obj_set_style_line_width(ui->ui_telaMain_linhaInf_L3, 2, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_line_color(ui->ui_telaMain_linhaInf_L3, lv_color_hex(0x656461), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_line_opa(ui->ui_telaMain_linhaInf_L3, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+    //Write codes ui_telaMain_label_set_L3
+    ui->ui_telaMain_label_set_L3 = lv_label_create(ui->ui_telaMain_cont_L3);
+    lv_label_set_text(ui->ui_telaMain_label_set_L3, "SET:");
+    lv_label_set_long_mode(ui->ui_telaMain_label_set_L3, LV_LABEL_LONG_WRAP);
+    lv_obj_set_pos(ui->ui_telaMain_label_set_L3, 4, 101);
+    lv_obj_set_size(ui->ui_telaMain_label_set_L3, 60, 30);
+
+    //Write style for ui_telaMain_label_set_L3, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+    lv_obj_set_style_border_width(ui->ui_telaMain_label_set_L3, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_radius(ui->ui_telaMain_label_set_L3, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_color(ui->ui_telaMain_label_set_L3, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_font(ui->ui_telaMain_label_set_L3, &lv_font_montserratMedium_14, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_opa(ui->ui_telaMain_label_set_L3, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_letter_space(ui->ui_telaMain_label_set_L3, 2, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_line_space(ui->ui_telaMain_label_set_L3, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_align(ui->ui_telaMain_label_set_L3, LV_TEXT_ALIGN_CENTER, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_opa(ui->ui_telaMain_label_set_L3, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_top(ui->ui_telaMain_label_set_L3, 8, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_right(ui->ui_telaMain_label_set_L3, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_bottom(ui->ui_telaMain_label_set_L3, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_left(ui->ui_telaMain_label_set_L3, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_shadow_width(ui->ui_telaMain_label_set_L3, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+    //Write codes ui_telaMain_label_saida_L3
+    ui->ui_telaMain_label_saida_L3 = lv_label_create(ui->ui_telaMain_cont_L3);
+    lv_label_set_text(ui->ui_telaMain_label_saida_L3, "Saida:");
+    lv_label_set_long_mode(ui->ui_telaMain_label_saida_L3, LV_LABEL_LONG_WRAP);
+    lv_obj_set_pos(ui->ui_telaMain_label_saida_L3, 1, 36);
+    lv_obj_set_size(ui->ui_telaMain_label_saida_L3, 60, 30);
+
+    //Write style for ui_telaMain_label_saida_L3, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+    lv_obj_set_style_border_width(ui->ui_telaMain_label_saida_L3, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_radius(ui->ui_telaMain_label_saida_L3, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_color(ui->ui_telaMain_label_saida_L3, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_font(ui->ui_telaMain_label_saida_L3, &lv_font_montserratMedium_12, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_opa(ui->ui_telaMain_label_saida_L3, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_letter_space(ui->ui_telaMain_label_saida_L3, 2, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_line_space(ui->ui_telaMain_label_saida_L3, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_align(ui->ui_telaMain_label_saida_L3, LV_TEXT_ALIGN_CENTER, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_opa(ui->ui_telaMain_label_saida_L3, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_top(ui->ui_telaMain_label_saida_L3, 8, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_right(ui->ui_telaMain_label_saida_L3, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_bottom(ui->ui_telaMain_label_saida_L3, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_left(ui->ui_telaMain_label_saida_L3, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_shadow_width(ui->ui_telaMain_label_saida_L3, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+    //Write codes ui_telaMain_lbDisplayL3
+    ui->ui_telaMain_lbDisplayL3 = lv_label_create(ui->ui_telaMain_cont_L3);
+    lv_label_set_text(ui->ui_telaMain_lbDisplayL3, "0.0");
+    lv_label_set_long_mode(ui->ui_telaMain_lbDisplayL3, LV_LABEL_LONG_WRAP);
+    lv_obj_set_pos(ui->ui_telaMain_lbDisplayL3, 36, -5);
+    lv_obj_set_size(ui->ui_telaMain_lbDisplayL3, 144, 82);
+
+    //Write style for ui_telaMain_lbDisplayL3, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+    lv_obj_set_style_border_width(ui->ui_telaMain_lbDisplayL3, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_radius(ui->ui_telaMain_lbDisplayL3, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_color(ui->ui_telaMain_lbDisplayL3, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_font(ui->ui_telaMain_lbDisplayL3, &lv_font_Antonio_Regular_56, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_opa(ui->ui_telaMain_lbDisplayL3, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_letter_space(ui->ui_telaMain_lbDisplayL3, 2, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_line_space(ui->ui_telaMain_lbDisplayL3, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_align(ui->ui_telaMain_lbDisplayL3, LV_TEXT_ALIGN_CENTER, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_opa(ui->ui_telaMain_lbDisplayL3, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_top(ui->ui_telaMain_lbDisplayL3, 8, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_right(ui->ui_telaMain_lbDisplayL3, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_bottom(ui->ui_telaMain_lbDisplayL3, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_left(ui->ui_telaMain_lbDisplayL3, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_shadow_width(ui->ui_telaMain_lbDisplayL3, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+    //Write codes ui_telaMain_lbCorrenteL3
+    ui->ui_telaMain_lbCorrenteL3 = lv_label_create(ui->ui_telaMain_cont_L3);
+    lv_label_set_text(ui->ui_telaMain_lbCorrenteL3, "123,4");
+    lv_label_set_long_mode(ui->ui_telaMain_lbCorrenteL3, LV_LABEL_LONG_WRAP);
+    lv_obj_set_pos(ui->ui_telaMain_lbCorrenteL3, 1, 68);
+    lv_obj_set_size(ui->ui_telaMain_lbCorrenteL3, 73, 33);
+
+    //Write style for ui_telaMain_lbCorrenteL3, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+    lv_obj_set_style_border_width(ui->ui_telaMain_lbCorrenteL3, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_radius(ui->ui_telaMain_lbCorrenteL3, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_color(ui->ui_telaMain_lbCorrenteL3, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_font(ui->ui_telaMain_lbCorrenteL3, &lv_font_Antonio_Regular_20, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_opa(ui->ui_telaMain_lbCorrenteL3, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_letter_space(ui->ui_telaMain_lbCorrenteL3, 2, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_line_space(ui->ui_telaMain_lbCorrenteL3, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_align(ui->ui_telaMain_lbCorrenteL3, LV_TEXT_ALIGN_CENTER, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_opa(ui->ui_telaMain_lbCorrenteL3, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_top(ui->ui_telaMain_lbCorrenteL3, 8, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_right(ui->ui_telaMain_lbCorrenteL3, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_bottom(ui->ui_telaMain_lbCorrenteL3, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_left(ui->ui_telaMain_lbCorrenteL3, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_shadow_width(ui->ui_telaMain_lbCorrenteL3, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+    //Write codes ui_telaMain_lbFatorL3
+    ui->ui_telaMain_lbFatorL3 = lv_label_create(ui->ui_telaMain_cont_L3);
+    lv_label_set_text(ui->ui_telaMain_lbFatorL3, "-0,99");
+    lv_label_set_long_mode(ui->ui_telaMain_lbFatorL3, LV_LABEL_LONG_WRAP);
+    lv_obj_set_pos(ui->ui_telaMain_lbFatorL3, 130, 68);
+    lv_obj_set_size(ui->ui_telaMain_lbFatorL3, 73, 33);
+
+    //Write style for ui_telaMain_lbFatorL3, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+    lv_obj_set_style_border_width(ui->ui_telaMain_lbFatorL3, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_radius(ui->ui_telaMain_lbFatorL3, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_color(ui->ui_telaMain_lbFatorL3, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_font(ui->ui_telaMain_lbFatorL3, &lv_font_Antonio_Regular_20, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_opa(ui->ui_telaMain_lbFatorL3, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_letter_space(ui->ui_telaMain_lbFatorL3, 2, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_line_space(ui->ui_telaMain_lbFatorL3, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_align(ui->ui_telaMain_lbFatorL3, LV_TEXT_ALIGN_CENTER, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_opa(ui->ui_telaMain_lbFatorL3, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_top(ui->ui_telaMain_lbFatorL3, 8, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_right(ui->ui_telaMain_lbFatorL3, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_bottom(ui->ui_telaMain_lbFatorL3, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_left(ui->ui_telaMain_lbFatorL3, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_shadow_width(ui->ui_telaMain_lbFatorL3, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+    //Write codes ui_telaMain_lbSetL3
+    ui->ui_telaMain_lbSetL3 = lv_label_create(ui->ui_telaMain_cont_L3);
+    lv_label_set_text(ui->ui_telaMain_lbSetL3, "0.0%");
+    lv_label_set_long_mode(ui->ui_telaMain_lbSetL3, LV_LABEL_LONG_WRAP);
+    lv_obj_set_pos(ui->ui_telaMain_lbSetL3, 53, 99);
+    lv_obj_set_size(ui->ui_telaMain_lbSetL3, 73, 33);
+
+    //Write style for ui_telaMain_lbSetL3, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+    lv_obj_set_style_border_width(ui->ui_telaMain_lbSetL3, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_radius(ui->ui_telaMain_lbSetL3, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_color(ui->ui_telaMain_lbSetL3, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_font(ui->ui_telaMain_lbSetL3, &lv_font_Antonio_Regular_20, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_opa(ui->ui_telaMain_lbSetL3, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_letter_space(ui->ui_telaMain_lbSetL3, 2, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_line_space(ui->ui_telaMain_lbSetL3, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_align(ui->ui_telaMain_lbSetL3, LV_TEXT_ALIGN_CENTER, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_opa(ui->ui_telaMain_lbSetL3, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_top(ui->ui_telaMain_lbSetL3, 8, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_right(ui->ui_telaMain_lbSetL3, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_bottom(ui->ui_telaMain_lbSetL3, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_left(ui->ui_telaMain_lbSetL3, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_shadow_width(ui->ui_telaMain_lbSetL3, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+    //Write codes ui_telaMain_cbHabL3
+    ui->ui_telaMain_cbHabL3 = lv_checkbox_create(ui->ui_telaMain_cont_L3);
+    lv_checkbox_set_text(ui->ui_telaMain_cbHabL3, "HAB");
+    lv_obj_set_pos(ui->ui_telaMain_cbHabL3, 122, 107);
+    lv_obj_add_state(ui->ui_telaMain_cbHabL3, LV_STATE_CHECKED);
+
+    //Write style for ui_telaMain_cbHabL3, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+    lv_obj_set_style_pad_top(ui->ui_telaMain_cbHabL3, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_left(ui->ui_telaMain_cbHabL3, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_right(ui->ui_telaMain_cbHabL3, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_bottom(ui->ui_telaMain_cbHabL3, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_color(ui->ui_telaMain_cbHabL3, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_font(ui->ui_telaMain_cbHabL3, &lv_font_montserratMedium_12, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_opa(ui->ui_telaMain_cbHabL3, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_letter_space(ui->ui_telaMain_cbHabL3, 2, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_width(ui->ui_telaMain_cbHabL3, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_radius(ui->ui_telaMain_cbHabL3, 6, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_opa(ui->ui_telaMain_cbHabL3, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_color(ui->ui_telaMain_cbHabL3, lv_color_hex(0x5a5b5b), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_grad_dir(ui->ui_telaMain_cbHabL3, LV_GRAD_DIR_HOR, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_grad_color(ui->ui_telaMain_cbHabL3, lv_color_hex(0x5a5b5b), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_main_stop(ui->ui_telaMain_cbHabL3, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_grad_stop(ui->ui_telaMain_cbHabL3, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_shadow_width(ui->ui_telaMain_cbHabL3, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+    //Write style for ui_telaMain_cbHabL3, Part: LV_PART_INDICATOR, State: LV_STATE_DEFAULT.
+    lv_obj_set_style_pad_all(ui->ui_telaMain_cbHabL3, 3, LV_PART_INDICATOR|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_width(ui->ui_telaMain_cbHabL3, 2, LV_PART_INDICATOR|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_opa(ui->ui_telaMain_cbHabL3, 255, LV_PART_INDICATOR|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_color(ui->ui_telaMain_cbHabL3, lv_color_hex(0x2195f6), LV_PART_INDICATOR|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_side(ui->ui_telaMain_cbHabL3, LV_BORDER_SIDE_FULL, LV_PART_INDICATOR|LV_STATE_DEFAULT);
+    lv_obj_set_style_radius(ui->ui_telaMain_cbHabL3, 6, LV_PART_INDICATOR|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_opa(ui->ui_telaMain_cbHabL3, 255, LV_PART_INDICATOR|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_color(ui->ui_telaMain_cbHabL3, lv_color_hex(0xffffff), LV_PART_INDICATOR|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_grad_dir(ui->ui_telaMain_cbHabL3, LV_GRAD_DIR_NONE, LV_PART_INDICATOR|LV_STATE_DEFAULT);
+
+//---------------------------------------------------------------------------------------------------------------------
+
+//Write codes ui_telaMain_cont_OnOff
+    ui->ui_telaMain_cont_OnOff = lv_obj_create(ui->ui_telaMain_dashboard);
+    lv_obj_set_pos(ui->ui_telaMain_cont_OnOff, 629, 1);
+    lv_obj_set_size(ui->ui_telaMain_cont_OnOff, 167, 68);
+    lv_obj_set_scrollbar_mode(ui->ui_telaMain_cont_OnOff, LV_SCROLLBAR_MODE_OFF);
+
+    //Write style for ui_telaMain_cont_OnOff, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+    lv_obj_set_style_border_width(ui->ui_telaMain_cont_OnOff, 1, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_opa(ui->ui_telaMain_cont_OnOff, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_color(ui->ui_telaMain_cont_OnOff, lv_color_hex(0x4A4C4A), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_side(ui->ui_telaMain_cont_OnOff, LV_BORDER_SIDE_FULL, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_radius(ui->ui_telaMain_cont_OnOff, 35, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_opa(ui->ui_telaMain_cont_OnOff, 250, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_color(ui->ui_telaMain_cont_OnOff, lv_color_hex(0x242424), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_grad_dir(ui->ui_telaMain_cont_OnOff, LV_GRAD_DIR_NONE, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_top(ui->ui_telaMain_cont_OnOff, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_bottom(ui->ui_telaMain_cont_OnOff, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_left(ui->ui_telaMain_cont_OnOff, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_right(ui->ui_telaMain_cont_OnOff, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_shadow_width(ui->ui_telaMain_cont_OnOff, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+    //Write codes ui_telaMain_btnOnOff
+    ui->ui_telaMain_btnOnOff = lv_btn_create(ui->ui_telaMain_cont_OnOff);
+    ui->ui_telaMain_label_btnOnOff = lv_label_create(ui->ui_telaMain_btnOnOff);
+    lv_label_set_text(ui->ui_telaMain_label_btnOnOff, "LIGAR");
+    lv_label_set_long_mode(ui->ui_telaMain_label_btnOnOff, LV_LABEL_LONG_WRAP);
+    lv_obj_align(ui->ui_telaMain_label_btnOnOff, LV_ALIGN_CENTER, 0, 0);
+    lv_obj_set_style_pad_all(ui->ui_telaMain_btnOnOff, 0, LV_STATE_DEFAULT);
+    lv_obj_set_width(ui->ui_telaMain_label_btnOnOff, LV_PCT(100));
+    lv_obj_set_pos(ui->ui_telaMain_btnOnOff, 23, 6);
+    lv_obj_set_size(ui->ui_telaMain_btnOnOff, 120, 53);
+
+    //Write style for ui_telaMain_btnOnOff, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+    lv_obj_set_style_bg_opa(ui->ui_telaMain_btnOnOff, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_color(ui->ui_telaMain_btnOnOff, lv_color_hex(0x2FDA64), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_grad_dir(ui->ui_telaMain_btnOnOff, LV_GRAD_DIR_NONE, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_width(ui->ui_telaMain_btnOnOff, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_radius(ui->ui_telaMain_btnOnOff, 17, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_shadow_width(ui->ui_telaMain_btnOnOff, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_color(ui->ui_telaMain_btnOnOff, lv_color_hex(0x000000), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_font(ui->ui_telaMain_btnOnOff, &lv_font_montserratMedium_20, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_opa(ui->ui_telaMain_btnOnOff, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_align(ui->ui_telaMain_btnOnOff, LV_TEXT_ALIGN_CENTER, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+    //Write style for ui_telaMain_btnOnOff, Part: LV_PART_MAIN, State: LV_STATE_PRESSED.
+    lv_obj_set_style_bg_opa(ui->ui_telaMain_btnOnOff, 255, LV_PART_MAIN|LV_STATE_PRESSED);
+    lv_obj_set_style_bg_color(ui->ui_telaMain_btnOnOff, lv_color_hex(0x18C220), LV_PART_MAIN|LV_STATE_PRESSED);
+    lv_obj_set_style_bg_grad_dir(ui->ui_telaMain_btnOnOff, LV_GRAD_DIR_NONE, LV_PART_MAIN|LV_STATE_PRESSED);
+    lv_obj_set_style_border_width(ui->ui_telaMain_btnOnOff, 0, LV_PART_MAIN|LV_STATE_PRESSED);
+    lv_obj_set_style_radius(ui->ui_telaMain_btnOnOff, 17, LV_PART_MAIN|LV_STATE_PRESSED);
+    lv_obj_set_style_shadow_width(ui->ui_telaMain_btnOnOff, 0, LV_PART_MAIN|LV_STATE_PRESSED);
+    lv_obj_set_style_text_color(ui->ui_telaMain_btnOnOff, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_PRESSED);
+    lv_obj_set_style_text_font(ui->ui_telaMain_btnOnOff, &lv_font_SourceHanSerifSC_Regular_18, LV_PART_MAIN|LV_STATE_PRESSED);
+    lv_obj_set_style_text_opa(ui->ui_telaMain_btnOnOff, 255, LV_PART_MAIN|LV_STATE_PRESSED);
+
 }
 
 void ihmTelaMainInit() {

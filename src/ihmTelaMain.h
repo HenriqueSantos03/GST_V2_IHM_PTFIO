@@ -123,8 +123,53 @@ typedef struct {
     lv_obj_t *ui_telaMain_label_btnFreq60;
     // containers de fase (cont_L1, cont_L2, cont_L3)
     lv_obj_t *ui_telaMain_cont_L1;
+    lv_obj_t *ui_telaMain_label_L1;
+    lv_obj_t *ui_telaMain_label_v_L1;
+    lv_obj_t *ui_telaMain_label_mA_L1;
+    lv_obj_t *ui_telaMain_label_fp_L1;
+    lv_obj_t *ui_telaMain_linhaSup_L1;
+    lv_obj_t *ui_telaMain_linhaInf_L1;
+    lv_obj_t *ui_telaMain_label_set_L1;
+    lv_obj_t *ui_telaMain_label_saida_L1;
+    lv_obj_t *ui_telaMain_lbDisplayL1;
+    lv_obj_t *ui_telaMain_lbCorrenteL1;
+    lv_obj_t *ui_telaMain_lbFatorL1;
+    lv_obj_t *ui_telaMain_lbSetL1;
+    lv_obj_t *ui_telaMain_cbHabL1;
+    // Cont_L2
     lv_obj_t *ui_telaMain_cont_L2;
+    lv_obj_t *ui_telaMain_label_L2;
+    lv_obj_t *ui_telaMain_label_v_L2;
+    lv_obj_t *ui_telaMain_label_mA_L2;
+    lv_obj_t *ui_telaMain_label_fp_L2;
+    lv_obj_t *ui_telaMain_linhaSup_L2;
+    lv_obj_t *ui_telaMain_linhaInf_L2;
+    lv_obj_t *ui_telaMain_label_set_L2;
+    lv_obj_t *ui_telaMain_label_saida_L2;
+    lv_obj_t *ui_telaMain_lbDisplayL2;
+    lv_obj_t *ui_telaMain_lbCorrenteL2;
+    lv_obj_t *ui_telaMain_lbFatorL2;
+    lv_obj_t *ui_telaMain_lbSetL2;
+    lv_obj_t *ui_telaMain_cbHabL2;
+    // Cont_L3
     lv_obj_t *ui_telaMain_cont_L3;
+    lv_obj_t *ui_telaMain_label_L3;
+    lv_obj_t *ui_telaMain_label_v_L3;
+    lv_obj_t *ui_telaMain_label_mA_L3;
+    lv_obj_t *ui_telaMain_label_fp_L3;
+    lv_obj_t *ui_telaMain_linhaSup_L3;
+    lv_obj_t *ui_telaMain_linhaInf_L3;
+    lv_obj_t *ui_telaMain_label_set_L3;
+    lv_obj_t *ui_telaMain_label_saida_L3;
+    lv_obj_t *ui_telaMain_lbDisplayL3;
+    lv_obj_t *ui_telaMain_lbCorrenteL3;
+    lv_obj_t *ui_telaMain_lbFatorL3;
+    lv_obj_t *ui_telaMain_lbSetL3;
+    lv_obj_t *ui_telaMain_cbHabL3;
+    // Container ONOFF
+    lv_obj_t *ui_telaMain_cont_OnOff;
+    lv_obj_t *ui_telaMain_btnOnOff;
+    lv_obj_t *ui_telaMain_label_btnOnOff;
 
     // Exemplo de objetos antigos, mantenha se usados em outro lugar
     lv_obj_t *btn_1;
