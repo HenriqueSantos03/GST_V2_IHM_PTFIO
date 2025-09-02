@@ -170,14 +170,11 @@ typedef struct {
     lv_obj_t *ui_telaMain_cont_OnOff;
     lv_obj_t *ui_telaMain_btnOnOff;
     lv_obj_t *ui_telaMain_label_btnOnOff;
-
-    // Exemplo de objetos antigos, mantenha se usados em outro lugar
-    lv_obj_t *btn_1;
-    lv_obj_t *ui_telaMain_label_btn_1;
-} ui_t;
+} lv_ui;
 
 void ihmTelaMainInit();
 void ihmTelaMainTask();
-void createMainUI(ui_t *ui);
+void createMainUI(lv_ui *ui);
+lv_ui *getUiTelaMain(void);
 
 #endif

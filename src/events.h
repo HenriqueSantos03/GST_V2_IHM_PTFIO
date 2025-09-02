@@ -2,9 +2,10 @@
 #define EVENTS_H
 
 #include <lvgl.h>
+#include "ihmTelaMain.h"
 
 void eventsInit();
 void eventsTask();
-void btn_1_event_cb(lv_obj_t *btn);
+void events_init_ui_telaMain(lv_ui *ui);
 
 #endif

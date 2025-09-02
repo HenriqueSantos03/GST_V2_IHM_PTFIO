@@ -5,7 +5,14 @@
 #include "fonts/fonts.h"
 #include "images/images.h"
 
-void createMainUI(ui_t *ui) {
+uint8_t dashboardCreated = 0;
+lv_ui uiTelaMain;
+
+//*******************************************************************************************
+// inicializa
+//*******************************************************************************************
+
+void createMainUI(lv_ui *ui) {
     lv_obj_set_style_bg_color(lv_scr_act(), lv_color_hex(0x000000), LV_PART_MAIN);
     lv_obj_set_style_bg_opa(lv_scr_act(), LV_OPA_COVER, LV_PART_MAIN);
     // Criar container principal (equivalente a ui_telaMain)
@@ -3080,11 +3087,23 @@ void createMainUI(ui_t *ui) {
     lv_obj_set_style_text_font(ui->ui_telaMain_btnOnOff, &lv_font_SourceHanSerifSC_Regular_18, LV_PART_MAIN|LV_STATE_PRESSED);
     lv_obj_set_style_text_opa(ui->ui_telaMain_btnOnOff, 255, LV_PART_MAIN|LV_STATE_PRESSED);
 
+    //Init events for screen.
+    events_init_ui_telaMain(ui);
+    // sinaliza que pode atualizar os valores
+    dashboardCreated = 1;
+
+}
+
+//*******************************************************************************************
+// ponteiro para ui
+//*******************************************************************************************
+
+lv_ui  *getUiTelaMain(void){
+    return &uiTelaMain;
 }
 
 void ihmTelaMainInit() {
-    static ui_t ui;
-    createMainUI(&ui);
+    createMainUI(&uiTelaMain);
 }
 
 void ihmTelaMainTask() {
