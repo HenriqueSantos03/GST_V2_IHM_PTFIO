@@ -61,6 +61,18 @@ typedef struct {
     lv_obj_t *ui_telaMain_selPasso4;
     // Container Sequencia
     lv_obj_t *ui_telaMain_cont_sequencia;
+    lv_obj_t *ui_telaMain_label_seqFase;
+    lv_obj_t *ui_telaMain_label_seq_l1;
+    lv_obj_t *ui_telaMain_label_seq_l2;
+    lv_obj_t *ui_telaMain_label_seq_l3;
+    lv_obj_t *ui_telaMain_btnSeqL1L2;
+    lv_obj_t *ui_telaMain_label_btnSeqL1L2;
+    lv_obj_t *ui_telaMain_btnSeqL2L3;
+    lv_obj_t *ui_telaMain_label_btnSeqL2L3;
+    lv_obj_t *ui_telaMain_btnSeqL1L3;
+    lv_obj_t *ui_telaMain_label_btnSeqL1L3;
+    lv_obj_t *ui_telaMain_btnSeqL1L2L3;
+    lv_obj_t *ui_telaMain_label_btnSeqL1L2L3;
 
     // Exemplo de objetos antigos, mantenha se usados em outro lugar
     lv_obj_t *btn_1;

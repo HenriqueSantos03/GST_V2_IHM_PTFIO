@@ -910,6 +910,256 @@ void createMainUI(ui_t *ui) {
     lv_obj_set_style_pad_left(ui->ui_telaMain_cont_sequencia, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
     lv_obj_set_style_pad_right(ui->ui_telaMain_cont_sequencia, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
     lv_obj_set_style_shadow_width(ui->ui_telaMain_cont_sequencia, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+    //Write codes ui_telaMain_label_seqFase
+    ui->ui_telaMain_label_seqFase = lv_label_create(ui->ui_telaMain_cont_sequencia);
+    lv_label_set_text(ui->ui_telaMain_label_seqFase, "Sequencia de Fase");
+    lv_label_set_long_mode(ui->ui_telaMain_label_seqFase, LV_LABEL_LONG_WRAP);
+    lv_obj_set_pos(ui->ui_telaMain_label_seqFase, 15, 125);
+    lv_obj_set_size(ui->ui_telaMain_label_seqFase, 158, 28);
+
+    //Write style for ui_telaMain_label_seqFase, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+    lv_obj_set_style_radius(ui->ui_telaMain_label_seqFase, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_width(ui->ui_telaMain_label_seqFase, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_color(ui->ui_telaMain_label_seqFase, lv_color_hex(0xa6ff00), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_font(ui->ui_telaMain_label_seqFase, &lv_font_montserratMedium_16, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_opa(ui->ui_telaMain_label_seqFase, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_letter_space(ui->ui_telaMain_label_seqFase, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_line_space(ui->ui_telaMain_label_seqFase, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_align(ui->ui_telaMain_label_seqFase, LV_TEXT_ALIGN_CENTER, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_opa(ui->ui_telaMain_label_seqFase, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_top(ui->ui_telaMain_label_seqFase, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_right(ui->ui_telaMain_label_seqFase, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_bottom(ui->ui_telaMain_label_seqFase, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_left(ui->ui_telaMain_label_seqFase, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_shadow_width(ui->ui_telaMain_label_seqFase, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+    //Write codes ui_telaMain_label_seq_l1
+    ui->ui_telaMain_label_seq_l1 = lv_label_create(ui->ui_telaMain_cont_sequencia);
+    lv_label_set_text(ui->ui_telaMain_label_seq_l1, "L1");
+    lv_label_set_long_mode(ui->ui_telaMain_label_seq_l1, LV_LABEL_LONG_WRAP);
+    lv_obj_set_pos(ui->ui_telaMain_label_seq_l1, 15, 5);
+    lv_obj_set_size(ui->ui_telaMain_label_seq_l1, 33, 28);
+
+    //Write style for ui_telaMain_label_seq_l1, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+    lv_obj_set_style_radius(ui->ui_telaMain_label_seq_l1, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_width(ui->ui_telaMain_label_seq_l1, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_color(ui->ui_telaMain_label_seq_l1, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_font(ui->ui_telaMain_label_seq_l1, &lv_font_montserratMedium_20, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_opa(ui->ui_telaMain_label_seq_l1, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_letter_space(ui->ui_telaMain_label_seq_l1, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_line_space(ui->ui_telaMain_label_seq_l1, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_align(ui->ui_telaMain_label_seq_l1, LV_TEXT_ALIGN_CENTER, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_opa(ui->ui_telaMain_label_seq_l1, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_top(ui->ui_telaMain_label_seq_l1, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_right(ui->ui_telaMain_label_seq_l1, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_bottom(ui->ui_telaMain_label_seq_l1, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_left(ui->ui_telaMain_label_seq_l1, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_shadow_width(ui->ui_telaMain_label_seq_l1, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+    //Write codes ui_telaMain_label_seq_l2
+    ui->ui_telaMain_label_seq_l2 = lv_label_create(ui->ui_telaMain_cont_sequencia);
+    lv_label_set_text(ui->ui_telaMain_label_seq_l2, "L2");
+    lv_label_set_long_mode(ui->ui_telaMain_label_seq_l2, LV_LABEL_LONG_WRAP);
+    lv_obj_set_pos(ui->ui_telaMain_label_seq_l2, 80, 6);
+    lv_obj_set_size(ui->ui_telaMain_label_seq_l2, 33, 28);
+
+    //Write style for ui_telaMain_label_seq_l2, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+    lv_obj_set_style_radius(ui->ui_telaMain_label_seq_l2, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_width(ui->ui_telaMain_label_seq_l2, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_color(ui->ui_telaMain_label_seq_l2, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_font(ui->ui_telaMain_label_seq_l2, &lv_font_montserratMedium_20, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_opa(ui->ui_telaMain_label_seq_l2, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_letter_space(ui->ui_telaMain_label_seq_l2, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_line_space(ui->ui_telaMain_label_seq_l2, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_align(ui->ui_telaMain_label_seq_l2, LV_TEXT_ALIGN_CENTER, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_opa(ui->ui_telaMain_label_seq_l2, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_top(ui->ui_telaMain_label_seq_l2, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_right(ui->ui_telaMain_label_seq_l2, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_bottom(ui->ui_telaMain_label_seq_l2, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_left(ui->ui_telaMain_label_seq_l2, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_shadow_width(ui->ui_telaMain_label_seq_l2, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+    //Write codes ui_telaMain_label_seq_l3
+    ui->ui_telaMain_label_seq_l3 = lv_label_create(ui->ui_telaMain_cont_sequencia);
+    lv_label_set_text(ui->ui_telaMain_label_seq_l3, "L3");
+    lv_label_set_long_mode(ui->ui_telaMain_label_seq_l3, LV_LABEL_LONG_WRAP);
+    lv_obj_set_pos(ui->ui_telaMain_label_seq_l3, 140, 5);
+    lv_obj_set_size(ui->ui_telaMain_label_seq_l3, 33, 28);
+
+    //Write style for ui_telaMain_label_seq_l3, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+    lv_obj_set_style_radius(ui->ui_telaMain_label_seq_l3, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_width(ui->ui_telaMain_label_seq_l3, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_color(ui->ui_telaMain_label_seq_l3, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_font(ui->ui_telaMain_label_seq_l3, &lv_font_montserratMedium_20, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_opa(ui->ui_telaMain_label_seq_l3, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_letter_space(ui->ui_telaMain_label_seq_l3, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_line_space(ui->ui_telaMain_label_seq_l3, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_align(ui->ui_telaMain_label_seq_l3, LV_TEXT_ALIGN_CENTER, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_opa(ui->ui_telaMain_label_seq_l3, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_top(ui->ui_telaMain_label_seq_l3, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_right(ui->ui_telaMain_label_seq_l3, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_bottom(ui->ui_telaMain_label_seq_l3, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_left(ui->ui_telaMain_label_seq_l3, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_shadow_width(ui->ui_telaMain_label_seq_l3, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+    //Write codes ui_telaMain_btnSeqL1L2
+    ui->ui_telaMain_btnSeqL1L2 = lv_btn_create(ui->ui_telaMain_cont_sequencia);
+    ui->ui_telaMain_label_btnSeqL1L2 = lv_label_create(ui->ui_telaMain_btnSeqL1L2);
+    lv_label_set_text(ui->ui_telaMain_label_btnSeqL1L2, "L1..L2");
+    lv_label_set_long_mode(ui->ui_telaMain_label_btnSeqL1L2, LV_LABEL_LONG_WRAP);
+    lv_obj_align(ui->ui_telaMain_label_btnSeqL1L2, LV_ALIGN_CENTER, 0, 0);
+    lv_obj_set_style_pad_all(ui->ui_telaMain_btnSeqL1L2, 0, LV_STATE_DEFAULT);
+    lv_obj_set_width(ui->ui_telaMain_label_btnSeqL1L2, LV_PCT(100));
+    lv_obj_set_pos(ui->ui_telaMain_btnSeqL1L2, 5, 30);
+    lv_obj_set_size(ui->ui_telaMain_btnSeqL1L2, 55, 40);
+
+    //Write style for ui_telaMain_btnSeqL1L2, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+    lv_obj_set_style_bg_opa(ui->ui_telaMain_btnSeqL1L2, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_color(ui->ui_telaMain_btnSeqL1L2, lv_color_hex(0x29BAE6), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_grad_dir(ui->ui_telaMain_btnSeqL1L2, LV_GRAD_DIR_NONE, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_width(ui->ui_telaMain_btnSeqL1L2, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_radius(ui->ui_telaMain_btnSeqL1L2, 17, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_shadow_width(ui->ui_telaMain_btnSeqL1L2, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_color(ui->ui_telaMain_btnSeqL1L2, lv_color_hex(0x000000), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_font(ui->ui_telaMain_btnSeqL1L2, &lv_font_montserratMedium_18, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_opa(ui->ui_telaMain_btnSeqL1L2, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_align(ui->ui_telaMain_btnSeqL1L2, LV_TEXT_ALIGN_CENTER, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+    //Write style for ui_telaMain_btnSeqL1L2, Part: LV_PART_MAIN, State: LV_STATE_PRESSED.
+    lv_obj_set_style_bg_opa(ui->ui_telaMain_btnSeqL1L2, 255, LV_PART_MAIN|LV_STATE_PRESSED);
+    lv_obj_set_style_bg_color(ui->ui_telaMain_btnSeqL1L2, lv_color_hex(0x18C220), LV_PART_MAIN|LV_STATE_PRESSED);
+    lv_obj_set_style_bg_grad_dir(ui->ui_telaMain_btnSeqL1L2, LV_GRAD_DIR_NONE, LV_PART_MAIN|LV_STATE_PRESSED);
+    lv_obj_set_style_border_width(ui->ui_telaMain_btnSeqL1L2, 0, LV_PART_MAIN|LV_STATE_PRESSED);
+    lv_obj_set_style_radius(ui->ui_telaMain_btnSeqL1L2, 17, LV_PART_MAIN|LV_STATE_PRESSED);
+    lv_obj_set_style_shadow_width(ui->ui_telaMain_btnSeqL1L2, 0, LV_PART_MAIN|LV_STATE_PRESSED);
+    lv_obj_set_style_text_color(ui->ui_telaMain_btnSeqL1L2, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_PRESSED);
+    lv_obj_set_style_text_font(ui->ui_telaMain_btnSeqL1L2, &lv_font_SourceHanSerifSC_Regular_18, LV_PART_MAIN|LV_STATE_PRESSED);
+    lv_obj_set_style_text_opa(ui->ui_telaMain_btnSeqL1L2, 255, LV_PART_MAIN|LV_STATE_PRESSED);
+
+    //Write codes ui_telaMain_btnSeqL2L3
+    ui->ui_telaMain_btnSeqL2L3 = lv_btn_create(ui->ui_telaMain_cont_sequencia);
+    ui->ui_telaMain_label_btnSeqL2L3 = lv_label_create(ui->ui_telaMain_btnSeqL2L3);
+    lv_label_set_text(ui->ui_telaMain_label_btnSeqL2L3, "L2..L3");
+    lv_label_set_long_mode(ui->ui_telaMain_label_btnSeqL2L3, LV_LABEL_LONG_WRAP);
+    lv_obj_align(ui->ui_telaMain_label_btnSeqL2L3, LV_ALIGN_CENTER, 0, 0);
+    lv_obj_set_style_pad_all(ui->ui_telaMain_btnSeqL2L3, 0, LV_STATE_DEFAULT);
+    lv_obj_set_width(ui->ui_telaMain_label_btnSeqL2L3, LV_PCT(100));
+    lv_obj_set_pos(ui->ui_telaMain_btnSeqL2L3, 70, 30);
+    lv_obj_set_size(ui->ui_telaMain_btnSeqL2L3, 55, 40);
+
+    //Write style for ui_telaMain_btnSeqL2L3, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+    lv_obj_set_style_bg_opa(ui->ui_telaMain_btnSeqL2L3, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_color(ui->ui_telaMain_btnSeqL2L3, lv_color_hex(0x29BAE6), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_grad_dir(ui->ui_telaMain_btnSeqL2L3, LV_GRAD_DIR_NONE, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_width(ui->ui_telaMain_btnSeqL2L3, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_radius(ui->ui_telaMain_btnSeqL2L3, 17, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_shadow_width(ui->ui_telaMain_btnSeqL2L3, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_color(ui->ui_telaMain_btnSeqL2L3, lv_color_hex(0x000000), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_font(ui->ui_telaMain_btnSeqL2L3, &lv_font_montserratMedium_18, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_opa(ui->ui_telaMain_btnSeqL2L3, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_align(ui->ui_telaMain_btnSeqL2L3, LV_TEXT_ALIGN_CENTER, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+    //Write style for ui_telaMain_btnSeqL2L3, Part: LV_PART_MAIN, State: LV_STATE_PRESSED.
+    lv_obj_set_style_bg_opa(ui->ui_telaMain_btnSeqL2L3, 255, LV_PART_MAIN|LV_STATE_PRESSED);
+    lv_obj_set_style_bg_color(ui->ui_telaMain_btnSeqL2L3, lv_color_hex(0x18C220), LV_PART_MAIN|LV_STATE_PRESSED);
+    lv_obj_set_style_bg_grad_dir(ui->ui_telaMain_btnSeqL2L3, LV_GRAD_DIR_NONE, LV_PART_MAIN|LV_STATE_PRESSED);
+    lv_obj_set_style_border_width(ui->ui_telaMain_btnSeqL2L3, 0, LV_PART_MAIN|LV_STATE_PRESSED);
+    lv_obj_set_style_radius(ui->ui_telaMain_btnSeqL2L3, 17, LV_PART_MAIN|LV_STATE_PRESSED);
+    lv_obj_set_style_shadow_width(ui->ui_telaMain_btnSeqL2L3, 0, LV_PART_MAIN|LV_STATE_PRESSED);
+    lv_obj_set_style_text_color(ui->ui_telaMain_btnSeqL2L3, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_PRESSED);
+    lv_obj_set_style_text_font(ui->ui_telaMain_btnSeqL2L3, &lv_font_SourceHanSerifSC_Regular_18, LV_PART_MAIN|LV_STATE_PRESSED);
+    lv_obj_set_style_text_opa(ui->ui_telaMain_btnSeqL2L3, 255, LV_PART_MAIN|LV_STATE_PRESSED);
+
+    //Write codes ui_telaMain_btnSeqL1L3
+    ui->ui_telaMain_btnSeqL1L3 = lv_btn_create(ui->ui_telaMain_cont_sequencia);
+    ui->ui_telaMain_label_btnSeqL1L3 = lv_label_create(ui->ui_telaMain_btnSeqL1L3);
+    lv_label_set_text(ui->ui_telaMain_label_btnSeqL1L3, "L1..L3");
+    lv_label_set_long_mode(ui->ui_telaMain_label_btnSeqL1L3, LV_LABEL_LONG_WRAP);
+    lv_obj_align(ui->ui_telaMain_label_btnSeqL1L3, LV_ALIGN_CENTER, 0, 0);
+    lv_obj_set_style_pad_all(ui->ui_telaMain_btnSeqL1L3, 0, LV_STATE_DEFAULT);
+    lv_obj_set_width(ui->ui_telaMain_label_btnSeqL1L3, LV_PCT(100));
+    lv_obj_set_pos(ui->ui_telaMain_btnSeqL1L3, 130, 30);
+    lv_obj_set_size(ui->ui_telaMain_btnSeqL1L3, 55, 40);
+
+    //Write style for ui_telaMain_btnSeqL1L3, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+    lv_obj_set_style_radius(ui->ui_telaMain_btnSeqL1L3, 17, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_opa(ui->ui_telaMain_btnSeqL1L3, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_color(ui->ui_telaMain_btnSeqL1L3, lv_color_hex(0x29BAE6), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_grad_dir(ui->ui_telaMain_btnSeqL1L3, LV_GRAD_DIR_NONE, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_width(ui->ui_telaMain_btnSeqL1L3, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_shadow_width(ui->ui_telaMain_btnSeqL1L3, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_color(ui->ui_telaMain_btnSeqL1L3, lv_color_hex(0x000000), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_font(ui->ui_telaMain_btnSeqL1L3, &lv_font_montserratMedium_18, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_opa(ui->ui_telaMain_btnSeqL1L3, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_align(ui->ui_telaMain_btnSeqL1L3, LV_TEXT_ALIGN_CENTER, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+    //Write style for ui_telaMain_btnSeqL1L3, Part: LV_PART_MAIN, State: LV_STATE_PRESSED.
+    lv_obj_set_style_bg_opa(ui->ui_telaMain_btnSeqL1L3, 255, LV_PART_MAIN|LV_STATE_PRESSED);
+    lv_obj_set_style_bg_color(ui->ui_telaMain_btnSeqL1L3, lv_color_hex(0x18C220), LV_PART_MAIN|LV_STATE_PRESSED);
+    lv_obj_set_style_bg_grad_dir(ui->ui_telaMain_btnSeqL1L3, LV_GRAD_DIR_NONE, LV_PART_MAIN|LV_STATE_PRESSED);
+    lv_obj_set_style_border_width(ui->ui_telaMain_btnSeqL1L3, 0, LV_PART_MAIN|LV_STATE_PRESSED);
+    lv_obj_set_style_radius(ui->ui_telaMain_btnSeqL1L3, 17, LV_PART_MAIN|LV_STATE_PRESSED);
+    lv_obj_set_style_shadow_width(ui->ui_telaMain_btnSeqL1L3, 0, LV_PART_MAIN|LV_STATE_PRESSED);
+    lv_obj_set_style_text_color(ui->ui_telaMain_btnSeqL1L3, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_PRESSED);
+    lv_obj_set_style_text_font(ui->ui_telaMain_btnSeqL1L3, &lv_font_SourceHanSerifSC_Regular_18, LV_PART_MAIN|LV_STATE_PRESSED);
+    lv_obj_set_style_text_opa(ui->ui_telaMain_btnSeqL1L3, 255, LV_PART_MAIN|LV_STATE_PRESSED);
+
+    //Write codes ui_telaMain_btnSeqL1L2L3
+    ui->ui_telaMain_btnSeqL1L2L3 = lv_btn_create(ui->ui_telaMain_cont_sequencia);
+    ui->ui_telaMain_label_btnSeqL1L2L3 = lv_label_create(ui->ui_telaMain_btnSeqL1L2L3);
+    lv_label_set_text(ui->ui_telaMain_label_btnSeqL1L2L3, "L1.L2.L3");
+    lv_label_set_long_mode(ui->ui_telaMain_label_btnSeqL1L2L3, LV_LABEL_LONG_WRAP);
+    lv_obj_align(ui->ui_telaMain_label_btnSeqL1L2L3, LV_ALIGN_CENTER, 0, 0);
+    lv_obj_set_style_pad_all(ui->ui_telaMain_btnSeqL1L2L3, 0, LV_STATE_DEFAULT);
+    lv_obj_set_width(ui->ui_telaMain_label_btnSeqL1L2L3, LV_PCT(100));
+    lv_obj_set_pos(ui->ui_telaMain_btnSeqL1L2L3, 30, 79);
+    lv_obj_set_size(ui->ui_telaMain_btnSeqL1L2L3, 131, 40);
+
+    //Write style for ui_telaMain_btnSeqL1L2L3, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+    lv_obj_set_style_radius(ui->ui_telaMain_btnSeqL1L2L3, 17, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_opa(ui->ui_telaMain_btnSeqL1L2L3, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_color(ui->ui_telaMain_btnSeqL1L2L3, lv_color_hex(0x29BAE6), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_grad_dir(ui->ui_telaMain_btnSeqL1L2L3, LV_GRAD_DIR_NONE, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_width(ui->ui_telaMain_btnSeqL1L2L3, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_shadow_width(ui->ui_telaMain_btnSeqL1L2L3, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_color(ui->ui_telaMain_btnSeqL1L2L3, lv_color_hex(0x000000), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_font(ui->ui_telaMain_btnSeqL1L2L3, &lv_font_montserratMedium_20, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_opa(ui->ui_telaMain_btnSeqL1L2L3, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_align(ui->ui_telaMain_btnSeqL1L2L3, LV_TEXT_ALIGN_CENTER, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+    //Write style for ui_telaMain_btnSeqL1L2L3, Part: LV_PART_MAIN, State: LV_STATE_PRESSED.
+    lv_obj_set_style_bg_opa(ui->ui_telaMain_btnSeqL1L2L3, 255, LV_PART_MAIN|LV_STATE_PRESSED);
+    lv_obj_set_style_bg_color(ui->ui_telaMain_btnSeqL1L2L3, lv_color_hex(0x18C220), LV_PART_MAIN|LV_STATE_PRESSED);
+    lv_obj_set_style_bg_grad_dir(ui->ui_telaMain_btnSeqL1L2L3, LV_GRAD_DIR_NONE, LV_PART_MAIN|LV_STATE_PRESSED);
+    lv_obj_set_style_border_width(ui->ui_telaMain_btnSeqL1L2L3, 0, LV_PART_MAIN|LV_STATE_PRESSED);
+    lv_obj_set_style_radius(ui->ui_telaMain_btnSeqL1L2L3, 17, LV_PART_MAIN|LV_STATE_PRESSED);
+    lv_obj_set_style_shadow_width(ui->ui_telaMain_btnSeqL1L2L3, 0, LV_PART_MAIN|LV_STATE_PRESSED);
+    lv_obj_set_style_text_color(ui->ui_telaMain_btnSeqL1L2L3, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_PRESSED);
+    lv_obj_set_style_text_font(ui->ui_telaMain_btnSeqL1L2L3, &lv_font_SourceHanSerifSC_Regular_18, LV_PART_MAIN|LV_STATE_PRESSED);
+    lv_obj_set_style_text_opa(ui->ui_telaMain_btnSeqL1L2L3, 255, LV_PART_MAIN|LV_STATE_PRESSED);
+
+    //Write codes ui_telaMain_cont_teclado
+    ui->ui_telaMain_cont_teclado = lv_obj_create(ui->ui_telaMain_containerMain);
+    lv_obj_set_pos(ui->ui_telaMain_cont_teclado, 6, 70);
+    lv_obj_set_size(ui->ui_telaMain_cont_teclado, 235, 260);
+    lv_obj_set_scrollbar_mode(ui->ui_telaMain_cont_teclado, LV_SCROLLBAR_MODE_OFF);
+
+    //Write style for ui_telaMain_cont_teclado, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+    lv_obj_set_style_border_width(ui->ui_telaMain_cont_teclado, 1, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_opa(ui->ui_telaMain_cont_teclado, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_color(ui->ui_telaMain_cont_teclado, lv_color_hex(0x4A4C4A), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_side(ui->ui_telaMain_cont_teclado, LV_BORDER_SIDE_FULL, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_radius(ui->ui_telaMain_cont_teclado, 35, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_opa(ui->ui_telaMain_cont_teclado, 242, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_color(ui->ui_telaMain_cont_teclado, lv_color_hex(0x5a5b5b), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_grad_dir(ui->ui_telaMain_cont_teclado, LV_GRAD_DIR_NONE, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_top(ui->ui_telaMain_cont_teclado, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_bottom(ui->ui_telaMain_cont_teclado, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_left(ui->ui_telaMain_cont_teclado, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_right(ui->ui_telaMain_cont_teclado, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_shadow_width(ui->ui_telaMain_cont_teclado, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+
 }
 
 void ihmTelaMainInit() {
