@@ -35,7 +35,7 @@ void my_touchpad_read(lv_indev_drv_t *indev_driver, lv_indev_data_t *data) {
         data->state = LV_INDEV_STATE_PR;
         data->point.x = touchX;
         data->point.y = touchY;
-        Serial.printf("Toque: x=%d, y=%d\n", touchX, touchY);
+        //Serial.printf("Toque: x=%d, y=%d\n", touchX, touchY);
     }
 }
 

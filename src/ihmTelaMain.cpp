@@ -663,7 +663,7 @@ void createMainUI(lv_ui *ui) {
     lv_obj_set_style_border_width(ui->ui_telaMain_btnAgrupar, 0, LV_PART_MAIN|LV_STATE_PRESSED);
     lv_obj_set_style_radius(ui->ui_telaMain_btnAgrupar, 17, LV_PART_MAIN|LV_STATE_PRESSED);
     lv_obj_set_style_text_color(ui->ui_telaMain_btnAgrupar, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_PRESSED);
-    lv_obj_set_style_text_font(ui->ui_telaMain_btnAgrupar, &lv_font_SourceHanSerifSC_Regular_18, LV_PART_MAIN|LV_STATE_PRESSED);
+    lv_obj_set_style_text_font(ui->ui_telaMain_btnAgrupar, &lv_font_montserratMedium_14, LV_PART_MAIN|LV_STATE_PRESSED);
     lv_obj_set_style_text_opa(ui->ui_telaMain_btnAgrupar, 255, LV_PART_MAIN|LV_STATE_PRESSED);
 //==================================================================================================================
 
@@ -908,6 +908,7 @@ void createMainUI(lv_ui *ui) {
     lv_obj_set_pos(ui->ui_telaMain_cont_sequencia, 164, 108);
     lv_obj_set_size(ui->ui_telaMain_cont_sequencia, 191, 145);
     lv_obj_set_scrollbar_mode(ui->ui_telaMain_cont_sequencia, LV_SCROLLBAR_MODE_OFF);
+    lv_obj_clear_flag(ui->ui_telaMain_cont_sequencia, LV_OBJ_FLAG_SCROLLABLE); //Make the object non-scrollable      
 
     //Write style for ui_telaMain_cont_sequencia, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
     lv_obj_set_style_border_width(ui->ui_telaMain_cont_sequencia, 1, LV_PART_MAIN|LV_STATE_DEFAULT);
@@ -1885,6 +1886,7 @@ void createMainUI(lv_ui *ui) {
     lv_obj_set_pos(ui->ui_telaMain_cont_frequencia, 5, 262);
     lv_obj_set_size(ui->ui_telaMain_cont_frequencia, 157, 145);
     lv_obj_set_scrollbar_mode(ui->ui_telaMain_cont_frequencia, LV_SCROLLBAR_MODE_OFF);
+    lv_obj_clear_flag(ui->ui_telaMain_cont_frequencia, LV_OBJ_FLAG_SCROLLABLE); // Disable scrolling
 
     //Write style for ui_telaMain_cont_frequencia, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
     lv_obj_set_style_border_width(ui->ui_telaMain_cont_frequencia, 1, LV_PART_MAIN|LV_STATE_DEFAULT);
