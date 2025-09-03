@@ -81,7 +81,7 @@ void createMainUI(lv_ui *ui) {
     lv_obj_set_width(ui->ui_telaMain_label_btn_upL1, LV_PCT(100));
     lv_obj_set_pos(ui->ui_telaMain_btn_upL1, 24, 3);
     lv_obj_set_size(ui->ui_telaMain_btn_upL1, 70, 50);
-    //lv_obj_add_flag(ui->ui_telaMain_btn_upL1, LV_OBJ_FLAG_HIDDEN); //esconde o botão
+    lv_obj_add_flag(ui->ui_telaMain_btn_upL1, LV_OBJ_FLAG_HIDDEN); //esconde o botão
 
     //Write style for ui_telaMain_btn_upL1, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
     lv_obj_set_style_bg_opa(ui->ui_telaMain_btn_upL1, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
@@ -114,7 +114,7 @@ void createMainUI(lv_ui *ui) {
     lv_img_set_angle(ui->ui_telaMain_img_upL1, 0);
     lv_obj_set_pos(ui->ui_telaMain_img_upL1, 54, 24);
     lv_obj_set_size(ui->ui_telaMain_img_upL1, 15, 10);
-    //lv_obj_add_flag(ui->ui_telaMain_img_upL1, LV_OBJ_FLAG_HIDDEN); // esconde o objeto na inicialização
+    lv_obj_add_flag(ui->ui_telaMain_img_upL1, LV_OBJ_FLAG_HIDDEN); // esconde o objeto na inicialização
 
     //Write style for ui_telaMain_img_upL1, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
     lv_obj_set_style_img_recolor_opa(ui->ui_telaMain_img_upL1, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
@@ -132,7 +132,7 @@ void createMainUI(lv_ui *ui) {
     lv_obj_set_width(ui->ui_telaMain_label_btn_downL1, LV_PCT(100));
     lv_obj_set_pos(ui->ui_telaMain_btn_downL1, 110, 3);
     lv_obj_set_size(ui->ui_telaMain_btn_downL1, 70, 50);
-    //lv_obj_add_flag(ui->ui_telaMain_btn_downL1, LV_OBJ_FLAG_HIDDEN); //esconde o botão
+    lv_obj_add_flag(ui->ui_telaMain_btn_downL1, LV_OBJ_FLAG_HIDDEN); //esconde o botão
 
     //Write style for ui_telaMain_btn_downL1, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
     lv_obj_set_style_bg_opa(ui->ui_telaMain_btn_downL1, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
@@ -165,7 +165,7 @@ void createMainUI(lv_ui *ui) {
     lv_img_set_angle(ui->ui_telaMain_img_downL1, 0);
     lv_obj_set_pos(ui->ui_telaMain_img_downL1, 139, 24);
     lv_obj_set_size(ui->ui_telaMain_img_downL1, 15, 10);
-    //lv_obj_add_flag(ui->ui_telaMain_img_downL1, LV_OBJ_FLAG_HIDDEN); // esconde o objeto na inicialização
+    lv_obj_add_flag(ui->ui_telaMain_img_downL1, LV_OBJ_FLAG_HIDDEN); // esconde o objeto na inicialização
 
     //Write style for ui_telaMain_img_downL1, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
     lv_obj_set_style_img_recolor_opa(ui->ui_telaMain_img_downL1, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
@@ -281,7 +281,7 @@ void createMainUI(lv_ui *ui) {
     lv_obj_set_width(ui->ui_telaMain_label_btn_upL3, LV_PCT(100));
     lv_obj_set_pos(ui->ui_telaMain_btn_upL3, 432, 3);
     lv_obj_set_size(ui->ui_telaMain_btn_upL3, 70, 50);
-    //lv_obj_add_flag(ui->ui_telaMain_btn_upL3, LV_OBJ_FLAG_HIDDEN); //esconde o botão
+    lv_obj_add_flag(ui->ui_telaMain_btn_upL3, LV_OBJ_FLAG_HIDDEN); //esconde o botão
 
     //Write style for ui_telaMain_btn_upL3, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
     lv_obj_set_style_bg_opa(ui->ui_telaMain_btn_upL3, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
@@ -314,7 +314,7 @@ void createMainUI(lv_ui *ui) {
     lv_img_set_angle(ui->ui_telaMain_img_upL3, 0);
     lv_obj_set_pos(ui->ui_telaMain_img_upL3, 462, 24);
     lv_obj_set_size(ui->ui_telaMain_img_upL3, 15, 10);
-    //lv_obj_add_flag(ui->ui_telaMain_img_upL3, LV_OBJ_FLAG_HIDDEN); // esconde o objeto na inicialização
+    lv_obj_add_flag(ui->ui_telaMain_img_upL3, LV_OBJ_FLAG_HIDDEN); // esconde o objeto na inicialização
 
     //Write style for ui_telaMain_img_upL3, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
     lv_obj_set_style_img_recolor_opa(ui->ui_telaMain_img_upL3, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
@@ -332,7 +332,7 @@ void createMainUI(lv_ui *ui) {
     lv_obj_set_width(ui->ui_telaMain_label_btn_downL3, LV_PCT(100));
     lv_obj_set_pos(ui->ui_telaMain_btn_downL3, 521, 3);
     lv_obj_set_size(ui->ui_telaMain_btn_downL3, 70, 50);
-    //lv_obj_add_flag(ui->ui_telaMain_btn_downL3, LV_OBJ_FLAG_HIDDEN); //esconde o botão
+    lv_obj_add_flag(ui->ui_telaMain_btn_downL3, LV_OBJ_FLAG_HIDDEN); //esconde o botão
 
     //Write style for ui_telaMain_btn_downL3, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
     lv_obj_set_style_bg_opa(ui->ui_telaMain_btn_downL3, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
@@ -365,7 +365,7 @@ void createMainUI(lv_ui *ui) {
     lv_img_set_angle(ui->ui_telaMain_img_downL3, 0);
     lv_obj_set_pos(ui->ui_telaMain_img_downL3, 550, 24);
     lv_obj_set_size(ui->ui_telaMain_img_downL3, 15, 10);
-    //lv_obj_add_flag(ui->ui_telaMain_img_downL3, LV_OBJ_FLAG_HIDDEN); // esconde o objeto na inicialização
+    lv_obj_add_flag(ui->ui_telaMain_img_downL3, LV_OBJ_FLAG_HIDDEN); // esconde o objeto na inicialização
 
     //Write style for ui_telaMain_img_downL3, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
     lv_obj_set_style_img_recolor_opa(ui->ui_telaMain_img_downL3, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
