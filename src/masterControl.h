@@ -61,9 +61,6 @@ enum PERCENTS_FASES{PERCENT_ALL,PERCENT_FASE_L1,PERCENT_FASE_L2, PERCENT_FASE_L3
 
 #define TIME_REFRESH 1000  //Tempo de refresh dos dados em ms
 
-void masterControlInit();
-void masterControlTask();
-
 typedef struct{
   bool statusBtnOnOff;      //determina o status do botao On/Off
   bool modeVolt;            //determina se a checkbox de grandeza está em tensao (1) ou porcentagem (0)
@@ -106,5 +103,9 @@ typedef struct{
 }STATUS_GST;
 
 STATUS_GST *getPtrStatusGst(void);
+
+void masterControlInit();
+void masterControlTask();
+void sendRefreshCommand();
 
 #endif

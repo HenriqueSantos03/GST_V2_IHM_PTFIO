@@ -1,5 +1,6 @@
 #include <Arduino.h>
 #include "masterControl.h"
+#include "UartTron.h"
 STATUS_GST statusGst;
 
 uint8_t bufferTx[48];
@@ -51,7 +52,76 @@ void masterControlInit(){
 
 void masterControlTask() {
     if(millis() > LRefresh + TIME_REFRESH) {
-        //sendRefreshCommand();
+        sendRefreshCommand();
         LRefresh = millis();
     }
+}
+
+void sendRefreshCommand() {
+
+    STATUS_GST *gst = getPtrStatusGst();
+    uint8_t indexTx = 0;
+    
+    // Header
+    bufferTx[indexTx++] = START_BYTE;
+    bufferTx[indexTx++] = CMD_REFRESH;
+    bufferTx[indexTx++] = REFRESH_PAYLOAD_SIZE;
+    
+    // Payload
+    bufferTx[indexTx++] = !gst->statusBtnOnOff;
+    bufferTx[indexTx++] = (gst->habL1 << 0) | (gst->habL2 << 1) | (gst->habL3 << 2);
+    
+    uint16_t freq = static_cast<uint16_t>(gst->freqAt * 10);
+    bufferTx[indexTx++] = (freq >> 8) & 0xFF;
+    bufferTx[indexTx++] = freq & 0xFF;
+    
+    uint16_t setpointL1 = static_cast<uint16_t>(gst->setPointL1 * 10);
+    bufferTx[indexTx++] = (setpointL1 >> 8) & 0xFF;
+    bufferTx[indexTx++] = setpointL1 & 0xFF;
+    uint16_t setpointL2 = static_cast<uint16_t>(gst->setPointL2 * 10);
+    bufferTx[indexTx++] = (setpointL2 >> 8) & 0xFF;
+    bufferTx[indexTx++] = setpointL2 & 0xFF;
+    uint16_t setpointL3 = static_cast<uint16_t>(gst->setPointL3 * 10);
+    bufferTx[indexTx++] = (setpointL3 >> 8) & 0xFF;
+    bufferTx[indexTx++] = setpointL3 & 0xFF;
+    
+    bufferTx[indexTx++] = gst->outL1;
+    bufferTx[indexTx++] = gst->outL2;
+    bufferTx[indexTx++] = gst->outL3;
+    
+    bufferTx[indexTx++] = (gst->correnteMaxL1 >> 8) & 0xFF;
+    bufferTx[indexTx++] = gst->correnteMaxL1 & 0xFF;
+    bufferTx[indexTx++] = (gst->correnteMaxL2 >> 8) & 0xFF;
+    bufferTx[indexTx++] = gst->correnteMaxL2 & 0xFF;
+    bufferTx[indexTx++] = (gst->correnteMaxL3 >> 8) & 0xFF;
+    bufferTx[indexTx++] = gst->correnteMaxL3 & 0xFF;
+    
+    bufferTx[indexTx++] = gst->modeAcDc;
+    
+    uint16_t escala = static_cast<uint16_t>(gst->vEscala * 10);
+    bufferTx[indexTx++] = (escala >> 8) & 0xFF;
+    bufferTx[indexTx++] = escala & 0xFF;
+    
+    uint16_t percentL1 = static_cast<uint16_t>(gst->setPointPercentL1 * 10);
+    bufferTx[indexTx++] = (percentL1 >> 8) & 0xFF;
+    bufferTx[indexTx++] = percentL1 & 0xFF;
+    uint16_t percentL2 = static_cast<uint16_t>(gst->setPointPercentL2 * 10);
+    bufferTx[indexTx++] = (percentL2 >> 8) & 0xFF;
+    bufferTx[indexTx++] = percentL2 & 0xFF;
+    uint16_t percentL3 = static_cast<uint16_t>(gst->setPointPercentL3 * 10);
+    bufferTx[indexTx++] = (percentL3 >> 8) & 0xFF;
+    bufferTx[indexTx++] = percentL3 & 0xFF;
+    
+    // Calcular CRC
+    uint8_t crc = uartTronCrcSlow(bufferTx, indexTx);
+    bufferTx[indexTx++] = crc;
+
+    // Enviar via UART
+    uartTronSendBuffer(bufferTx, indexTx); // 3 (header) + 30 (payload) + 1 (CRC)
+    // depuração 
+    /* Serial.print("Pacote enviado: ");
+    for (uint8_t i = 0; i < indexTx; i++) {
+        Serial.print("0x"); Serial.print(bufferTx[i], HEX); Serial.print(" ");
+    }
+    Serial.println(); */
 }
