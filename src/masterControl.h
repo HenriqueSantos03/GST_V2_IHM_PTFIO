@@ -60,6 +60,15 @@ enum PERCENTS_FASES{PERCENT_ALL,PERCENT_FASE_L1,PERCENT_FASE_L2, PERCENT_FASE_L3
 #define CONST_FASE_L3 3
 
 #define TIME_REFRESH 1000  //Tempo de refresh dos dados em ms
+#define TIMEOUT_STATUS 200 //Timeout para aguardar resposta do status em ms
+
+// Enum para a máquina de estados
+enum MASTER_STATE {
+    STATE_IDLE,         // Estado ocioso, aguardando início do ciclo
+    STATE_SEND_REFRESH, // Envia comando de refresh
+    STATE_WAIT_STATUS,  // Aguarda resposta do comando de status
+    STATE_PROCESS_COMMAND // Processa a resposta recebida
+};
 
 typedef struct{
   bool statusBtnOnOff;      //determina o status do botao On/Off

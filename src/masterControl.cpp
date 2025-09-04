@@ -5,6 +5,10 @@ STATUS_GST statusGst;
 
 uint8_t bufferTx[48];
 uint32_t LRefresh = 0;
+static uint8_t currentState = STATE_IDLE; // Estado inicial da máquina de estados
+static uint8_t lastPacketBuffer[MAX_PACKET_SIZE];
+static uint8_t lastPacketSize = 0;
+static unsigned long stateTimeout = 0;
 
 //*******************************************************************************************
 // ponteiro para o status do gst
@@ -51,14 +55,36 @@ void masterControlInit(){
 }
 
 void masterControlTask() {
-    if(millis() > LRefresh + TIME_REFRESH) {
-        sendRefreshCommand();
-        LRefresh = millis();
+    switch (currentState) {
+        case STATE_IDLE:
+            if (millis() > LRefresh + TIME_REFRESH) {
+                currentState = STATE_SEND_REFRESH;
+            }
+            break;
+
+        case STATE_SEND_REFRESH:
+            sendRefreshCommand();
+            stateTimeout = millis();
+            currentState = STATE_WAIT_STATUS;
+            break;
+
+        case STATE_WAIT_STATUS:
+            if (millis() > stateTimeout + TIMEOUT_STATUS) {
+                // Timeout aguardando resposta, volta para IDLE
+                currentState = STATE_IDLE;
+                LRefresh = millis();
+            }
+            break;
+
+        case STATE_PROCESS_COMMAND:
+            // Reseta o timer de refresh e volta para IDLE
+            LRefresh = millis();
+            currentState = STATE_IDLE;
+            break;
     }
 }
 
 void sendRefreshCommand() {
-
     STATUS_GST *gst = getPtrStatusGst();
     uint8_t indexTx = 0;
     
@@ -115,13 +141,27 @@ void sendRefreshCommand() {
     // Calcular CRC
     uint8_t crc = uartTronCrcSlow(bufferTx, indexTx);
     bufferTx[indexTx++] = crc;
-
-    // Enviar via UART
-    uartTronSendBuffer(bufferTx, indexTx); // 3 (header) + 30 (payload) + 1 (CRC)
-    // depuração 
+    
+    // depuração
     /* Serial.print("Pacote enviado: ");
     for (uint8_t i = 0; i < indexTx; i++) {
         Serial.print("0x"); Serial.print(bufferTx[i], HEX); Serial.print(" ");
     }
     Serial.println(); */
+    
+    // Enviar via UART
+    uartTronSendBuffer(bufferTx, indexTx); // 3 (header) + 30 (payload) + 1 (CRC)
+}
+
+// configura o callback para receber pacotes da 
+void masterControlHandlePacket(uint8_t* packet, uint8_t size) {
+    if (size <= MAX_PACKET_SIZE) {
+        memcpy(lastPacketBuffer, packet, size);
+        lastPacketSize = size;
+        currentState = STATE_PROCESS_COMMAND;
+        stateTimeout = millis();
+    } else {
+        Serial.println("Erro: Pacote da  excede tamanho máximo!");
+        currentState = STATE_IDLE; // Retorna ao estado ocioso em caso de erro
+    }
 }
