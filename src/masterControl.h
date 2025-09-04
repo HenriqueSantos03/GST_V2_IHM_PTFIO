@@ -97,6 +97,9 @@ typedef struct{
   uint8_t outL1;            //Variavel que controla a fase L1 e permite a inversão de fase com outra
   uint8_t outL2;            //Variavel que controla a fase L2 e permite a inversão de fase com outra
   uint8_t outL3;            //Variavel que controla a fase L3 e permite a inversão de fase com outra
+  uint16_t tensaoL1;       //Valor atual de tensão da fase 1
+  uint16_t tensaoL2;       //Valor atual de tensão da fase 2
+  uint16_t tensaoL3;       //Valor atual de tensão da fase 3
   uint16_t correnteL1;      //Valor atual de corrente da fase 1
   uint16_t correnteL2;      //Valor atual de corrente da fase 2
   uint16_t correnteL3;      //Valor atual de corrente da fase 3
@@ -116,5 +119,7 @@ STATUS_GST *getPtrStatusGst(void);
 void masterControlInit();
 void masterControlTask();
 void sendRefreshCommand();
+void processStatusCommand();
+void masterControlHandlePacket(uint8_t* packet, uint8_t size);
 
 #endif

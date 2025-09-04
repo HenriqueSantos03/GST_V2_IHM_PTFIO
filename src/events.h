@@ -27,5 +27,6 @@ void desbloquearTeclado(lv_ui *ui, STATUS_GST *gst);
 void mbox_close_event_cb(lv_event_t * e);
 void altModecbHab(lv_ui *ui, STATUS_GST *gst);
 void altModeInputTeclado(lv_ui *ui, STATUS_GST *gst);
+void ihmDashboardRefresh();
 
 #endif

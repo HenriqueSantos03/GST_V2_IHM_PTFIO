@@ -792,20 +792,20 @@ void showSetPointL1(lv_ui *ui, STATUS_GST *gst) {
     sprintf(convstr, "%.1f", gst->setPointL2); // Converte o valor de tensão em string
     lv_label_set_text(ui->ui_telaMain_lbDisplayL2, convstr); // Atualiza a label de tensão
 }
- /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
- //Faz a conversão de porcentagem para tensao com base na escala selecionada, atribui o valor à variavel de tensao e atualiza as labels de porcentagem e tensao
- void showSetPointL3(lv_ui *ui, STATUS_GST *gst) {
-    char convstr[32];
-    // Exibe o valor atual de porcentagem diretamente
-    if (gst->setPointPercentL3 > SET_POINT_PERCENT_MAX) gst->setPointPercentL3 = SET_POINT_PERCENT_MAX; // Limita ao máximo
-    if (gst->setPointPercentL3 < 0.0f) gst->setPointPercentL3 = 0.0f; // Limita ao mínimo de 0%
-    // Atualiza a label da porcentagem na interface
-    sprintf(convstr, "%.1f%%", gst->setPointPercentL3); // Converte o valor percentual em string com %
-    lv_label_set_text(ui->ui_telaMain_lbSetL3, convstr); // Atualiza a label de porcentagem
-    // Converte o valor percentual para tensão correspondente e exibe
-    gst->setPointL3 = (gst->setPointPercentL3 * gst->vEscala) / 1000.0; // Calcula a tensão com base na porcentagem
-    sprintf(convstr, "%.1f", gst->setPointL3); // Converte o valor de tensão em string
-    lv_label_set_text(ui->ui_telaMain_lbDisplayL3, convstr); // Atualiza a label de tensão
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//Faz a conversão de porcentagem para tensao com base na escala selecionada, atribui o valor à variavel de tensao e atualiza as labels de porcentagem e tensao
+void showSetPointL3(lv_ui *ui, STATUS_GST *gst) {
+  char convstr[32];
+  // Exibe o valor atual de porcentagem diretamente
+  if (gst->setPointPercentL3 > SET_POINT_PERCENT_MAX) gst->setPointPercentL3 = SET_POINT_PERCENT_MAX; // Limita ao máximo
+  if (gst->setPointPercentL3 < 0.0f) gst->setPointPercentL3 = 0.0f; // Limita ao mínimo de 0%
+  // Atualiza a label da porcentagem na interface
+  sprintf(convstr, "%.1f%%", gst->setPointPercentL3); // Converte o valor percentual em string com %
+  lv_label_set_text(ui->ui_telaMain_lbSetL3, convstr); // Atualiza a label de porcentagem
+  // Converte o valor percentual para tensão correspondente e exibe
+  gst->setPointL3 = (gst->setPointPercentL3 * gst->vEscala) / 1000.0; // Calcula a tensão com base na porcentagem
+  sprintf(convstr, "%.1f", gst->setPointL3); // Converte o valor de tensão em string
+  lv_label_set_text(ui->ui_telaMain_lbDisplayL3, convstr); // Atualiza a label de tensão
 }
  /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
  //Atualiza o valor das variaveis das tres fases, faz as conversões necessarias e atualiza os valores dos setpoints na tela ao mesmo tempo 
@@ -1038,6 +1038,55 @@ void altModeInputTeclado(lv_ui *ui, STATUS_GST *gst){
     lv_obj_set_style_bg_color(ui->ui_telaMain_btn_cancel, lv_color_hex(0x29BAE6), LV_PART_MAIN|LV_STATE_DEFAULT);
     lv_obj_set_style_bg_color(ui->ui_telaMain_btn_ok, lv_color_hex(0x29BAE6), LV_PART_MAIN|LV_STATE_DEFAULT);
   }
+}
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//Atualiza os valores do dashboard (tensao, corrente e fator de potencia)
+void ihmDashboardRefresh() {
+  char convstr[32];
+  lv_ui *ui = getUiTelaMain();
+  STATUS_GST *gst = getPtrStatusGst();
+
+  // Verifica se os ponteiros são válidos
+  /* if (ui == nullptr) {
+    Serial.println("Erro: Ponteiro ui nulo em ihmDashboardRefresh");
+    return;
+  }
+  if (gst == nullptr) {
+    Serial.println("Erro: Ponteiro gst nulo em ihmDashboardRefresh");
+    return;
+  }
+  if (ui->ui_telaMain_lbDisplayL1 == nullptr || ui->ui_telaMain_lbDisplayL2 == nullptr ||
+      ui->ui_telaMain_lbDisplayL3 == nullptr || ui->ui_telaMain_lbCorrenteL1 == nullptr ||
+      ui->ui_telaMain_lbCorrenteL2 == nullptr || ui->ui_telaMain_lbCorrenteL3 == nullptr ||
+      ui->ui_telaMain_lbFatorL1 == nullptr || ui->ui_telaMain_lbFatorL2 == nullptr ||
+      ui->ui_telaMain_lbFatorL3 == nullptr) {
+    Serial.println("Erro: Um ou mais objetos LVGL são nulos em ihmDashboardRefresh");
+    return;
+  } */
+ 
+  // Atualiza os labels de tensão
+  sprintf(convstr, "%.1f", gst->tensaoL1); 
+  lv_label_set_text(ui->ui_telaMain_lbDisplayL1, convstr);
+  sprintf(convstr, "%.1f", gst->tensaoL2); 
+  lv_label_set_text(ui->ui_telaMain_lbDisplayL2, convstr);
+  sprintf(convstr, "%.1f", gst->tensaoL3); 
+  lv_label_set_text(ui->ui_telaMain_lbDisplayL3, convstr);
+
+  // Atualiza os labels de corrente (convertendo mA para A com 3 casas decimais)
+  sprintf(convstr, "%.1f", gst->correnteL1/10.0); 
+  lv_label_set_text(ui->ui_telaMain_lbCorrenteL1, convstr);
+  sprintf(convstr, "%.1f", gst->correnteL2/10.0);
+  lv_label_set_text(ui->ui_telaMain_lbCorrenteL2, convstr);
+  sprintf(convstr, "%.1f", gst->correnteL3/10.0);
+  lv_label_set_text(ui->ui_telaMain_lbCorrenteL3, convstr);
+
+  // Atualiza os labels de fator de potência (convertendo de centésimos para decimal)
+  sprintf(convstr, "%.2f", gst->fatorDePotenciaL1 / 100.0);
+  lv_label_set_text(ui->ui_telaMain_lbFatorL1, convstr);
+  sprintf(convstr, "%.2f", gst->fatorDePotenciaL2 / 100.0);
+  lv_label_set_text(ui->ui_telaMain_lbFatorL2, convstr);
+  sprintf(convstr, "%.2f", gst->fatorDePotenciaL3 / 100.0);
+  lv_label_set_text(ui->ui_telaMain_lbFatorL3, convstr);
 }
 //*****************************************************************************
 // Inicialização dos eventos da telaMain

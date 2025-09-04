@@ -8,60 +8,57 @@ uint8_t uartRxBuffer[MAX_PACKET_SIZE];
 uint8_t uartRxIndex = 0;
 uint32_t uartTimeoutRx = 0;
 size_t uartRxSize = 0;
-UartReceivedCallback uartReceivedCallback = nullptr; // Callback para pacotes válidos
+UartReceivedCallback uartReceivedCallback = nullptr;
 
 void uartTronInit(){
-    // Inicializa serial 1 nos pinos 18 (RX) e 17 (TX) com baud rate de 115200
-    Serial1.begin(115200, SERIAL_8N1, UART_RX_PIN, UART_TX_PIN);
+    Serial1.begin(9600, SERIAL_8N1, UART_RX_PIN, UART_TX_PIN);
     Serial1.println("UART Tron initialized");
 }
 
 void uartTronTask(void) {
     uint8_t data;
-
-    // Recepção de dados
     while (Serial1.available()) {
         data = Serial1.read();
-        
-        // Aguardando início do pacote
+        Serial.print("Byte recebido: 0x"); Serial.println(data, HEX);
         if (uartRxIndex == 0) {
             if (data == START_BYTE) {
-                // Salva o start byte
                 uartRxBuffer[uartRxIndex++] = START_BYTE;
                 uartRxSize = 1;
+                Serial.println("Start byte detectado");
             }
-        }
-        else {  // Já iniciou a captura de um pacote
-            // Armazena o dado
+        } else {
             uartRxBuffer[uartRxIndex++] = data;
             uartRxSize = uartRxIndex;
-            
-            // Valida a quantidade máxima
             if (uartRxIndex >= MAX_PACKET_SIZE) {
-                // Cancela recepção - estouro do buffer
+                Serial.println("Erro: Estouro de buffer");
                 uartRxIndex = 0;
                 break;
             }
-            
-            // Atualiza timeout
             uartTimeoutRx = millis();
         }
     }
-
-    // Timeout - finalização da recepção do pacote
-    if ((uartRxIndex > 0) && (millis() > (uartTimeoutRx + TEMPO_MAX_RECEVING))) {
-        // Tamanho mínimo de um pacote (start + cmd + size + payload + crc)
-        if (uartRxIndex >= 4) {
-            // Valida o CRC
+    if ((uartRxIndex >= 3) && (millis() > (uartTimeoutRx + TEMPO_MAX_RECEVING))) {
+        uint8_t expectedSize = uartRxBuffer[2] + 1; // Tamanho do payload + 1 (CRC)
+        Serial.print("Tamanho esperado: "); Serial.println(expectedSize);
+        if (uartRxIndex >= expectedSize) {
+            Serial.print("Pacote recebido, tamanho: "); Serial.println(uartRxIndex);
             uint8_t crcCalc = uartTronCrcSlow(uartRxBuffer, uartRxIndex - 1);
+            Serial.print("CRC calculado: 0x"); Serial.println(crcCalc, HEX);
+            Serial.print("CRC recebido: 0x"); Serial.println(uartRxBuffer[uartRxIndex - 1], HEX);
             if (crcCalc == uartRxBuffer[uartRxIndex - 1]) {
-                // Chama o callback se estiver configurado
+                Serial.println("CRC válido, chamando callback");
                 if (uartReceivedCallback != nullptr) {
                     uartReceivedCallback(uartRxBuffer, uartRxIndex);
                 }
+            } else {
+                Serial.println("Erro: CRC inválido");
             }
+            uartRxIndex = 0;
+        } else {
+            Serial.println("Erro: Pacote incompleto, aguardando mais bytes");
         }
-        // Libera para próxima recepção
+    } else if ((uartRxIndex > 0) && (millis() > (uartTimeoutRx + TEMPO_MAX_RECEVING))) {
+        Serial.println("Erro: Timeout com pacote parcial, tamanho: " + String(uartRxIndex));
         uartRxIndex = 0;
     }
 }
@@ -70,11 +67,9 @@ void setUartReceivedCallback(UartReceivedCallback callback) {
     uartReceivedCallback = callback;
 }
 
-// Cálculo CRC
 uint8_t uartTronCrcSlow(uint8_t message[], int nBytes) {
     const uint8_t POLYNOMIAL = 0xD8;
     uint8_t crc = 0;
-    
     for (int byte = 0; byte < nBytes; ++byte) {
         crc ^= message[byte];
         for (uint8_t bit = 0; bit < 8; ++bit) {
