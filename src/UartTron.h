@@ -16,8 +16,8 @@ typedef void (*UartReceivedCallback)(uint8_t* packet, uint8_t size);
 #define CMD_STATUS 'S'
 #define MAX_PACKET_SIZE 64  // Tamanho máximo esperado para um pacote
 
-#define REFRESH_PAYLOAD_SIZE 31
-#define STATUS_PAYLOAD_SIZE 24
+#define REFRESH_PAYLOAD_SIZE 30 //era 31, diminuir para 30 (retirar o status on/off)
+#define STATUS_PAYLOAD_SIZE 25 //era 24, aumentar pra 25 (adicionar o status on/off)
 //----------------------------------------------------------------------------
 
 void uartTronInit();

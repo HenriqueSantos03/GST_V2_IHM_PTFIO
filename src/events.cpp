@@ -27,7 +27,7 @@ void ui_telaMain_event_handler (lv_event_t *e){
 //*****************************************************************************
 // Botão ON/OFF 
 //*****************************************************************************
-static void ui_telaMain_btn_onoff_event_handler (lv_event_t *e){
+/* static void ui_telaMain_btn_onoff_event_handler (lv_event_t *e){
   lv_event_code_t code = lv_event_get_code(e);
   lv_obj_t *id_btn = lv_event_get_target(e);
   lv_ui *ui = getUiTelaMain();
@@ -49,7 +49,7 @@ static void ui_telaMain_btn_onoff_event_handler (lv_event_t *e){
       }
     }
   }
-}
+} */
 //*****************************************************************************
 // Seleção de container de fases e cbHab
 //*****************************************************************************
@@ -1110,6 +1110,9 @@ void ihmDashboardRefresh() {
   Serial.print("Valor bruto gst->fatorDePotenciaL2: "); Serial.println(gst->fatorDePotenciaL2);
   Serial.print("Valor bruto gst->fatorDePotenciaL3: "); Serial.println(gst->fatorDePotenciaL3);
 
+  // Atualiza a label e o status do container de On/Off
+  
+
   // Atualiza os labels de tensão
   sprintf(convstr, "%.1f", (float)gst->tensaoL1);
   lv_label_set_text(ui->ui_telaMain_lbDisplayL1, convstr);
@@ -1141,7 +1144,7 @@ void ihmDashboardRefresh() {
 //*****************************************************************************
 void events_init_ui_telaMain(lv_ui *ui) {
     lv_obj_add_event_cb(ui->ui_telaMain_dashboard, ui_telaMain_event_handler, LV_EVENT_SCREEN_LOADED, ui); // LV_EVENT_ALL
-    lv_obj_add_event_cb(ui->ui_telaMain_btnOnOff, ui_telaMain_btn_onoff_event_handler, LV_EVENT_ALL, ui);
+    //lv_obj_add_event_cb(ui->ui_telaMain_btnOnOff, ui_telaMain_btn_onoff_event_handler, LV_EVENT_ALL, ui);
     lv_obj_add_event_cb(ui->ui_telaMain_cont_L1, ui_telaMain_container_fase_event_handler, LV_EVENT_ALL, ui);
     lv_obj_add_event_cb(ui->ui_telaMain_cont_L2, ui_telaMain_container_fase_event_handler, LV_EVENT_ALL, ui);
     lv_obj_add_event_cb(ui->ui_telaMain_cont_L3, ui_telaMain_container_fase_event_handler, LV_EVENT_ALL, ui);

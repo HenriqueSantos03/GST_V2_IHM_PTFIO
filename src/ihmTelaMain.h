@@ -168,8 +168,10 @@ typedef struct {
     lv_obj_t *ui_telaMain_cbHabL3;
     // Container ONOFF
     lv_obj_t *ui_telaMain_cont_OnOff;
-    lv_obj_t *ui_telaMain_btnOnOff;
-    lv_obj_t *ui_telaMain_label_btnOnOff;
+    lv_obj_t *ui_telaMain_cont_label_OnOff;
+    lv_obj_t *ui_telaMain_label_OnOff;
+    /* lv_obj_t *ui_telaMain_btnOnOff;
+    lv_obj_t *ui_telaMain_label_btnOnOff; */
 } lv_ui;
 
 void ihmTelaMainInit();

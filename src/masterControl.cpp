@@ -84,7 +84,7 @@ void sendRefreshCommand() {
     bufferTx[indexTx++] = START_BYTE;
     bufferTx[indexTx++] = CMD_REFRESH;
     bufferTx[indexTx++] = REFRESH_PAYLOAD_SIZE;
-    bufferTx[indexTx++] = !gst->statusBtnOnOff;
+    //bufferTx[indexTx++] = !gst->statusBtnOnOff;
     bufferTx[indexTx++] = (gst->habL1 << 0) | (gst->habL2 << 1) | (gst->habL3 << 2);
     uint16_t freq = static_cast<uint16_t>(gst->freqAt * 10);
     bufferTx[indexTx++] = (freq >> 8) & 0xFF;
@@ -139,6 +139,7 @@ void processStatusCommand() {
     Serial.println("Pacote Status recebido com sucesso.");
     STATUS_GST *gst = getPtrStatusGst();
     uint8_t index = 3;
+    gst->statusBtnOnOff = lastPacketBuffer[index++];
     gst->tensaoL1 = ((lastPacketBuffer[index] << 8) | lastPacketBuffer[index + 1]) / 10.0;
     index += 2;
     gst->tensaoL2 = ((lastPacketBuffer[index] << 8) | lastPacketBuffer[index + 1]) / 10.0;

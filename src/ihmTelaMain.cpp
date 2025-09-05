@@ -3034,7 +3034,7 @@ void createMainUI(lv_ui *ui) {
 
 //---------------------------------------------------------------------------------------------------------------------
 
-//Write codes ui_telaMain_cont_OnOff
+    //Write codes ui_telaMain_cont_OnOff
     ui->ui_telaMain_cont_OnOff = lv_obj_create(ui->ui_telaMain_dashboard);
     lv_obj_set_pos(ui->ui_telaMain_cont_OnOff, 629, 1);
     lv_obj_set_size(ui->ui_telaMain_cont_OnOff, 167, 68);
@@ -3054,8 +3054,49 @@ void createMainUI(lv_ui *ui) {
     lv_obj_set_style_pad_left(ui->ui_telaMain_cont_OnOff, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
     lv_obj_set_style_pad_right(ui->ui_telaMain_cont_OnOff, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
     lv_obj_set_style_shadow_width(ui->ui_telaMain_cont_OnOff, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    
+    //Write codes ui_telaMain_cont_label_OnOff
+    ui->ui_telaMain_cont_label_OnOff = lv_obj_create(ui->ui_telaMain_cont_OnOff);
+    lv_obj_set_pos(ui->ui_telaMain_cont_label_OnOff, 16, 6);
+    lv_obj_set_size(ui->ui_telaMain_cont_label_OnOff, 134, 54);
+    lv_obj_set_scrollbar_mode(ui->ui_telaMain_cont_label_OnOff, LV_SCROLLBAR_MODE_OFF);
 
-    //Write codes ui_telaMain_btnOnOff
+    //Write style for ui_telaMain_cont_label_OnOff, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+    lv_obj_set_style_border_width(ui->ui_telaMain_cont_label_OnOff, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_radius(ui->ui_telaMain_cont_label_OnOff, 17, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_opa(ui->ui_telaMain_cont_label_OnOff, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_color(ui->ui_telaMain_cont_label_OnOff, lv_color_hex(0xff002D), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_grad_dir(ui->ui_telaMain_cont_label_OnOff, LV_GRAD_DIR_NONE, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_top(ui->ui_telaMain_cont_label_OnOff, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_bottom(ui->ui_telaMain_cont_label_OnOff, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_left(ui->ui_telaMain_cont_label_OnOff, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_right(ui->ui_telaMain_cont_label_OnOff, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_shadow_width(ui->ui_telaMain_cont_label_OnOff, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+    //Write codes ui_telaMain_label_OnOff
+    ui->ui_telaMain_label_OnOff = lv_label_create(ui->ui_telaMain_cont_label_OnOff);
+    lv_label_set_text(ui->ui_telaMain_label_OnOff, "DESLIGADO");
+    lv_label_set_long_mode(ui->ui_telaMain_label_OnOff, LV_LABEL_LONG_WRAP);
+    lv_obj_set_pos(ui->ui_telaMain_label_OnOff, -2, 16);
+    lv_obj_set_size(ui->ui_telaMain_label_OnOff, 137, 30);
+
+    //Write style for ui_telaMain_label_OnOff, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+    lv_obj_set_style_border_width(ui->ui_telaMain_label_OnOff, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_radius(ui->ui_telaMain_label_OnOff, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_color(ui->ui_telaMain_label_OnOff, lv_color_hex(0x000000), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_font(ui->ui_telaMain_label_OnOff, &lv_font_montserratMedium_20, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_opa(ui->ui_telaMain_label_OnOff, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_letter_space(ui->ui_telaMain_label_OnOff, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_line_space(ui->ui_telaMain_label_OnOff, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_align(ui->ui_telaMain_label_OnOff, LV_TEXT_ALIGN_CENTER, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_opa(ui->ui_telaMain_label_OnOff, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_top(ui->ui_telaMain_label_OnOff, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_right(ui->ui_telaMain_label_OnOff, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_bottom(ui->ui_telaMain_label_OnOff, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_left(ui->ui_telaMain_label_OnOff, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_shadow_width(ui->ui_telaMain_label_OnOff, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+    /* //Write codes ui_telaMain_btnOnOff
     ui->ui_telaMain_btnOnOff = lv_btn_create(ui->ui_telaMain_cont_OnOff);
     ui->ui_telaMain_label_btnOnOff = lv_label_create(ui->ui_telaMain_btnOnOff);
     lv_label_set_text(ui->ui_telaMain_label_btnOnOff, "LIGAR");
@@ -3087,7 +3128,7 @@ void createMainUI(lv_ui *ui) {
     lv_obj_set_style_shadow_width(ui->ui_telaMain_btnOnOff, 0, LV_PART_MAIN|LV_STATE_PRESSED);
     lv_obj_set_style_text_color(ui->ui_telaMain_btnOnOff, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_PRESSED);
     lv_obj_set_style_text_font(ui->ui_telaMain_btnOnOff, &lv_font_SourceHanSerifSC_Regular_18, LV_PART_MAIN|LV_STATE_PRESSED);
-    lv_obj_set_style_text_opa(ui->ui_telaMain_btnOnOff, 255, LV_PART_MAIN|LV_STATE_PRESSED);
+    lv_obj_set_style_text_opa(ui->ui_telaMain_btnOnOff, 255, LV_PART_MAIN|LV_STATE_PRESSED); */
 
     //Init events for screen.
     events_init_ui_telaMain(ui);
