@@ -10,7 +10,7 @@
 typedef void (*UartReceivedCallback)(uint8_t* packet, uint8_t size);
 
 //----------------------------------------------------------------------------
-#define TEMPO_MAX_RECEVING 200  // Timeout de recepção em ms
+#define TEMPO_MAX_RECEVING 20  // Timeout de recepção em ms
 #define START_BYTE 0x7E
 #define CMD_REFRESH 'R'
 #define CMD_STATUS 'S'

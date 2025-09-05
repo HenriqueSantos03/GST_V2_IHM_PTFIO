@@ -38,12 +38,12 @@ void ui_telaMain_event_handler (lv_event_t *e){
     if (id_btn == ui->ui_telaMain_btnOnOff) {
       Serial.println("Clique ON/OFF");
       //Verifica o status do botao de ON/OFF.
-      if(gst->statusBtnOnOff==0){
-        gst->statusBtnOnOff = 1;
+      if(gst->statusOnOff==0){
+        gst->statusOnOff = 1;
         lv_obj_set_style_bg_color(ui->ui_telaMain_btnOnOff, lv_color_hex(0x2FDA64), LV_PART_MAIN|LV_STATE_DEFAULT);
         lv_label_set_text(ui->ui_telaMain_label_btnOnOff, "LIGAR");
       }else{
-        gst->statusBtnOnOff = 0;
+        gst->statusOnOff = 0;
         lv_obj_set_style_bg_color(ui->ui_telaMain_btnOnOff, lv_color_hex(0xFF002D), LV_PART_MAIN|LV_STATE_DEFAULT);
         lv_label_set_text(ui->ui_telaMain_label_btnOnOff, "DESLIGAR");
       }
@@ -1111,7 +1111,13 @@ void ihmDashboardRefresh() {
   Serial.print("Valor bruto gst->fatorDePotenciaL3: "); Serial.println(gst->fatorDePotenciaL3);
 
   // Atualiza a label e o status do container de On/Off
-  
+  if(gst->statusOnOff){
+    lv_label_set_text(ui->ui_telaMain_label_OnOff, "LIGADO");
+    lv_obj_set_style_bg_color(ui->ui_telaMain_cont_label_OnOff, lv_color_hex(0x2fda64), LV_PART_MAIN|LV_STATE_DEFAULT);
+  } else{
+    lv_label_set_text(ui->ui_telaMain_label_OnOff, "DESLIGADO");
+    lv_obj_set_style_bg_color(ui->ui_telaMain_cont_label_OnOff, lv_color_hex(0xff002D), LV_PART_MAIN|LV_STATE_DEFAULT);
+  }
 
   // Atualiza os labels de tensão
   sprintf(convstr, "%.1f", (float)gst->tensaoL1);

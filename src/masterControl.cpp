@@ -17,7 +17,7 @@ STATUS_GST *getPtrStatusGst(void){
 }
 
 void masterControlInit(){
-    statusGst.statusBtnOnOff = STATUS_BTN_ONOFF;
+    statusGst.statusOnOff = STATUS_ONOFF;
     statusGst.modeVolt = 0;
     statusGst.atvL1 = STATUS_L1;
     statusGst.atvL2 = STATUS_L2;
@@ -84,7 +84,7 @@ void sendRefreshCommand() {
     bufferTx[indexTx++] = START_BYTE;
     bufferTx[indexTx++] = CMD_REFRESH;
     bufferTx[indexTx++] = REFRESH_PAYLOAD_SIZE;
-    //bufferTx[indexTx++] = !gst->statusBtnOnOff;
+    //bufferTx[indexTx++] = !gst->statusOnOff;
     bufferTx[indexTx++] = (gst->habL1 << 0) | (gst->habL2 << 1) | (gst->habL3 << 2);
     uint16_t freq = static_cast<uint16_t>(gst->freqAt * 10);
     bufferTx[indexTx++] = (freq >> 8) & 0xFF;
@@ -139,7 +139,7 @@ void processStatusCommand() {
     Serial.println("Pacote Status recebido com sucesso.");
     STATUS_GST *gst = getPtrStatusGst();
     uint8_t index = 3;
-    gst->statusBtnOnOff = lastPacketBuffer[index++];
+    gst->statusOnOff = lastPacketBuffer[index++];
     gst->tensaoL1 = ((lastPacketBuffer[index] << 8) | lastPacketBuffer[index + 1]) / 10.0;
     index += 2;
     gst->tensaoL2 = ((lastPacketBuffer[index] << 8) | lastPacketBuffer[index + 1]) / 10.0;
@@ -161,7 +161,7 @@ void processStatusCommand() {
     gst->statusPlacaL1 = lastPacketBuffer[index++];
     gst->statusPlacaL2 = lastPacketBuffer[index++];
     gst->statusPlacaL3 = lastPacketBuffer[index++];
-    Serial.println("Valores atualizados: VL1=" + String(gst->tensaoL1) + ", correnteL1=" + String(gst->correnteL1) + ", FPL1="+ String(gst->fatorDePotenciaL1)+ ", VL2=" + String(gst->tensaoL2)+ ", correnteL2=" + String(gst->correnteL2) + ", FPL2="+ String(gst->fatorDePotenciaL2)+ ", VL3=" + String(gst->tensaoL3)+ ", correnteL3=" + String(gst->correnteL3) + ", FPL3="+ String(gst->fatorDePotenciaL3));
+    Serial.println("Valores atualizados: Status OnOFF=" + String(gst->statusOnOff) + ", VL1=" + String(gst->tensaoL1) + ", correnteL1=" + String(gst->correnteL1) + ", FPL1="+ String(gst->fatorDePotenciaL1)+ ", VL2=" + String(gst->tensaoL2)+ ", correnteL2=" + String(gst->correnteL2) + ", FPL2="+ String(gst->fatorDePotenciaL2)+ ", VL3=" + String(gst->tensaoL3)+ ", correnteL3=" + String(gst->correnteL3) + ", FPL3="+ String(gst->fatorDePotenciaL3));
     ihmDashboardRefresh();
     LRefresh = millis();
     currentState = STATE_IDLE;

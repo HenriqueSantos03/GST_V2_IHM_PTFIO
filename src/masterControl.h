@@ -52,15 +52,15 @@ enum PERCENTS_FASES{PERCENT_ALL,PERCENT_FASE_L1,PERCENT_FASE_L2, PERCENT_FASE_L3
 #define STATUS_L1 0                       
 #define STATUS_L2 0
 #define STATUS_L3 0
-#define STATUS_BTN_ONOFF 1                //Determina o estado do botao de on/off 
+#define STATUS_ONOFF 0                //Determina o estado de on/off 
 
 //Constantes para sequencia de fase
 #define CONST_FASE_L1 1
 #define CONST_FASE_L2 2
 #define CONST_FASE_L3 3
 
-#define TIME_REFRESH 1000  //Tempo de refresh dos dados em ms
-#define TIMEOUT_STATUS 200 //Timeout para aguardar resposta do status em ms
+#define TIME_REFRESH 250  //Tempo de refresh dos dados em ms
+#define TIMEOUT_STATUS 20 //Timeout para aguardar resposta do status em ms
 
 // Enum para a máquina de estados
 enum MASTER_STATE {
@@ -71,7 +71,7 @@ enum MASTER_STATE {
 };
 
 typedef struct{
-  bool statusBtnOnOff;      //determina o status do botao On/Off
+  bool statusOnOff;         //determina o status do On/Off
   bool modeVolt;            //determina se a checkbox de grandeza está em tensao (1) ou porcentagem (0)
   bool modeAcDc;            //determina se a saída está em AC (0) ou DC (1)
   bool atvL1;               //determina se a fase 1 está ativa 
