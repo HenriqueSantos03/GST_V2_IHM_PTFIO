@@ -775,7 +775,7 @@ void showSetPointL1(lv_ui *ui, STATUS_GST *gst) {
     // Converte o valor percentual para tensão correspondente e exibe
     gst->setPointL1 = (gst->setPointPercentL1 * gst->vEscala) / 1000.0; // Calcula a tensão com base na porcentagem
     sprintf(convstr, "%.1f", gst->setPointL1); // Converte o valor de tensão em string
-    lv_label_set_text(ui->ui_telaMain_lbDisplayL1, convstr); // Atualiza a label de tensão
+    //lv_label_set_text(ui->ui_telaMain_lbDisplayL1, convstr); // Atualiza a label de tensão
 }
  /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
  //Faz a conversão de porcentagem para tensao com base na escala selecionada, atribui o valor à variavel de tensao e atualiza as labels de porcentagem e tensao
@@ -790,7 +790,7 @@ void showSetPointL1(lv_ui *ui, STATUS_GST *gst) {
     // Converte o valor percentual para tensão correspondente e exibe
     gst->setPointL2 = (gst->setPointPercentL2 * gst->vEscala) / 1000.0; // Calcula a tensão com base na porcentagem
     sprintf(convstr, "%.1f", gst->setPointL2); // Converte o valor de tensão em string
-    lv_label_set_text(ui->ui_telaMain_lbDisplayL2, convstr); // Atualiza a label de tensão
+    //lv_label_set_text(ui->ui_telaMain_lbDisplayL2, convstr); // Atualiza a label de tensão
 }
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //Faz a conversão de porcentagem para tensao com base na escala selecionada, atribui o valor à variavel de tensao e atualiza as labels de porcentagem e tensao
@@ -805,7 +805,7 @@ void showSetPointL3(lv_ui *ui, STATUS_GST *gst) {
   // Converte o valor percentual para tensão correspondente e exibe
   gst->setPointL3 = (gst->setPointPercentL3 * gst->vEscala) / 1000.0; // Calcula a tensão com base na porcentagem
   sprintf(convstr, "%.1f", gst->setPointL3); // Converte o valor de tensão em string
-  lv_label_set_text(ui->ui_telaMain_lbDisplayL3, convstr); // Atualiza a label de tensão
+  //lv_label_set_text(ui->ui_telaMain_lbDisplayL3, convstr); // Atualiza a label de tensão
 }
  /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
  //Atualiza o valor das variaveis das tres fases, faz as conversões necessarias e atualiza os valores dos setpoints na tela ao mesmo tempo 
@@ -1046,8 +1046,8 @@ void ihmDashboardRefresh() {
   lv_ui *ui = getUiTelaMain();
   STATUS_GST *gst = getPtrStatusGst();
 
-  // Verifica se os ponteiros são válidos
-  /* if (ui == nullptr) {
+  // Verifica se os ponteiros principais são válidos
+  if (ui == nullptr) {
     Serial.println("Erro: Ponteiro ui nulo em ihmDashboardRefresh");
     return;
   }
@@ -1055,38 +1055,86 @@ void ihmDashboardRefresh() {
     Serial.println("Erro: Ponteiro gst nulo em ihmDashboardRefresh");
     return;
   }
-  if (ui->ui_telaMain_lbDisplayL1 == nullptr || ui->ui_telaMain_lbDisplayL2 == nullptr ||
-      ui->ui_telaMain_lbDisplayL3 == nullptr || ui->ui_telaMain_lbCorrenteL1 == nullptr ||
-      ui->ui_telaMain_lbCorrenteL2 == nullptr || ui->ui_telaMain_lbCorrenteL3 == nullptr ||
-      ui->ui_telaMain_lbFatorL1 == nullptr || ui->ui_telaMain_lbFatorL2 == nullptr ||
-      ui->ui_telaMain_lbFatorL3 == nullptr) {
+
+  // Verifica cada objeto LVGL individualmente
+  bool hasError = false;
+  if (ui->ui_telaMain_lbDisplayL1 == nullptr) {
+    Serial.println("Erro: ui_telaMain_lbDisplayL1 é nulo");
+    hasError = true;
+  }
+  if (ui->ui_telaMain_lbDisplayL2 == nullptr) {
+    Serial.println("Erro: ui_telaMain_lbDisplayL2 é nulo");
+    hasError = true;
+  }
+  if (ui->ui_telaMain_lbDisplayL3 == nullptr) {
+    Serial.println("Erro: ui_telaMain_lbDisplayL3 é nulo");
+    hasError = true;
+  }
+  if (ui->ui_telaMain_lbCorrenteL1 == nullptr) {
+    Serial.println("Erro: ui_telaMain_lbCorrenteL1 é nulo");
+    hasError = true;
+  }
+  if (ui->ui_telaMain_lbCorrenteL2 == nullptr) {
+    Serial.println("Erro: ui_telaMain_lbCorrenteL2 é nulo");
+    hasError = true;
+  }
+  if (ui->ui_telaMain_lbCorrenteL3 == nullptr) {
+    Serial.println("Erro: ui_telaMain_lbCorrenteL3 é nulo");
+    hasError = true;
+  }
+  if (ui->ui_telaMain_lbFatorL1 == nullptr) {
+    Serial.println("Erro: ui_telaMain_lbFatorL1 é nulo");
+    hasError = true;
+  }
+  if (ui->ui_telaMain_lbFatorL2 == nullptr) {
+    Serial.println("Erro: ui_telaMain_lbFatorL2 é nulo");
+    hasError = true;
+  }
+  if (ui->ui_telaMain_lbFatorL3 == nullptr) {
+    Serial.println("Erro: ui_telaMain_lbFatorL3 é nulo");
+    hasError = true;
+  }
+  if (hasError) {
     Serial.println("Erro: Um ou mais objetos LVGL são nulos em ihmDashboardRefresh");
     return;
-  } */
- 
+  }
+
+  // Depuração dos valores brutos
+  Serial.print("Valor bruto gst->tensaoL1: "); Serial.println(gst->tensaoL1);
+  Serial.print("Valor bruto gst->tensaoL2: "); Serial.println(gst->tensaoL2);
+  Serial.print("Valor bruto gst->tensaoL3: "); Serial.println(gst->tensaoL3);
+  Serial.print("Valor bruto gst->correnteL1: "); Serial.println(gst->correnteL1);
+  Serial.print("Valor bruto gst->correnteL2: "); Serial.println(gst->correnteL2);
+  Serial.print("Valor bruto gst->correnteL3: "); Serial.println(gst->correnteL3);
+  Serial.print("Valor bruto gst->fatorDePotenciaL1: "); Serial.println(gst->fatorDePotenciaL1);
+  Serial.print("Valor bruto gst->fatorDePotenciaL2: "); Serial.println(gst->fatorDePotenciaL2);
+  Serial.print("Valor bruto gst->fatorDePotenciaL3: "); Serial.println(gst->fatorDePotenciaL3);
+
   // Atualiza os labels de tensão
-  sprintf(convstr, "%.1f", gst->tensaoL1); 
+  sprintf(convstr, "%.1f", (float)gst->tensaoL1);
   lv_label_set_text(ui->ui_telaMain_lbDisplayL1, convstr);
-  sprintf(convstr, "%.1f", gst->tensaoL2); 
+  sprintf(convstr, "%.1f", (float)gst->tensaoL2);
   lv_label_set_text(ui->ui_telaMain_lbDisplayL2, convstr);
-  sprintf(convstr, "%.1f", gst->tensaoL3); 
+  sprintf(convstr, "%.1f", (float)gst->tensaoL3);
   lv_label_set_text(ui->ui_telaMain_lbDisplayL3, convstr);
 
-  // Atualiza os labels de corrente (convertendo mA para A com 3 casas decimais)
-  sprintf(convstr, "%.1f", gst->correnteL1/10.0); 
+  // Atualiza os labels de corrente
+  sprintf(convstr, "%.1f", (float)gst->correnteL1/10.0);
   lv_label_set_text(ui->ui_telaMain_lbCorrenteL1, convstr);
-  sprintf(convstr, "%.1f", gst->correnteL2/10.0);
+  sprintf(convstr, "%.1f", (float)gst->correnteL2/10.0);
   lv_label_set_text(ui->ui_telaMain_lbCorrenteL2, convstr);
-  sprintf(convstr, "%.1f", gst->correnteL3/10.0);
+  sprintf(convstr, "%.1f", (float)gst->correnteL3/10.0);
   lv_label_set_text(ui->ui_telaMain_lbCorrenteL3, convstr);
 
-  // Atualiza os labels de fator de potência (convertendo de centésimos para decimal)
-  sprintf(convstr, "%.2f", gst->fatorDePotenciaL1 / 100.0);
+  // Atualiza os labels de fator de potência
+  sprintf(convstr, "%.2f", (float)gst->fatorDePotenciaL1 / 100.0);
   lv_label_set_text(ui->ui_telaMain_lbFatorL1, convstr);
-  sprintf(convstr, "%.2f", gst->fatorDePotenciaL2 / 100.0);
+  sprintf(convstr, "%.2f", (float)gst->fatorDePotenciaL2 / 100.0);
   lv_label_set_text(ui->ui_telaMain_lbFatorL2, convstr);
-  sprintf(convstr, "%.2f", gst->fatorDePotenciaL3 / 100.0);
+  sprintf(convstr, "%.2f", (float)gst->fatorDePotenciaL3 / 100.0);
   lv_label_set_text(ui->ui_telaMain_lbFatorL3, convstr);
+
+  Serial.println("Dashboard atualizado com sucesso");
 }
 //*****************************************************************************
 // Inicialização dos eventos da telaMain

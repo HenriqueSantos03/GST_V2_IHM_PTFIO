@@ -11,7 +11,7 @@ size_t uartRxSize = 0;
 UartReceivedCallback uartReceivedCallback = nullptr;
 
 void uartTronInit(){
-    Serial1.begin(9600, SERIAL_8N1, UART_RX_PIN, UART_TX_PIN);
+    Serial1.begin(115200, SERIAL_8N1, UART_RX_PIN, UART_TX_PIN);
     Serial1.println("UART Tron initialized");
 }
 

@@ -52,8 +52,8 @@ void masterControlInit(){
 }
 
 void masterControlTask() {
-    Serial.print("Estado atual: "); // Depuração
-    Serial.println(currentState);
+    /* Serial.print("Estado atual: "); // Depuração
+    Serial.println(currentState); */
     switch (currentState) {
         case STATE_IDLE:
             if (millis() > LRefresh + TIME_REFRESH) {
@@ -67,7 +67,7 @@ void masterControlTask() {
             break;
         case STATE_WAIT_STATUS:
             if (millis() > stateTimeout + TIMEOUT_STATUS) {
-                Serial.println("Timeout aguardando STATUS");
+                //Serial.println("Timeout aguardando STATUS");
                 currentState = STATE_IDLE;
                 LRefresh = millis();
             }
@@ -160,7 +160,7 @@ void processStatusCommand() {
     gst->statusPlacaL1 = lastPacketBuffer[index++];
     gst->statusPlacaL2 = lastPacketBuffer[index++];
     gst->statusPlacaL3 = lastPacketBuffer[index++];
-    Serial.println("Valores atualizados: tensaoL1=" + String(gst->tensaoL1) + ", correnteL1=" + String(gst->correnteL1));
+    Serial.println("Valores atualizados: VL1=" + String(gst->tensaoL1) + ", correnteL1=" + String(gst->correnteL1) + ", FPL1="+ String(gst->fatorDePotenciaL1)+ ", VL2=" + String(gst->tensaoL2)+ ", correnteL2=" + String(gst->correnteL2) + ", FPL2="+ String(gst->fatorDePotenciaL2)+ ", VL3=" + String(gst->tensaoL3)+ ", correnteL3=" + String(gst->correnteL3) + ", FPL3="+ String(gst->fatorDePotenciaL3));
     ihmDashboardRefresh();
     LRefresh = millis();
     currentState = STATE_IDLE;
