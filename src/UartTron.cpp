@@ -19,12 +19,16 @@ void uartTronTask(void) {
     uint8_t data;
     while (Serial1.available()) {
         data = Serial1.read();
+        #ifdef DEBUG_KEYBOARD
         Serial.print("Byte recebido: 0x"); Serial.println(data, HEX);
+        #endif
         if (uartRxIndex == 0) {
             if (data == START_BYTE) {
                 uartRxBuffer[uartRxIndex++] = START_BYTE;
                 uartRxSize = 1;
+                #ifdef DEBUG_KEYBOARD
                 Serial.println("Start byte detectado");
+                #endif
             }
         } else {
             uartRxBuffer[uartRxIndex++] = data;
@@ -39,14 +43,22 @@ void uartTronTask(void) {
     }
     if ((uartRxIndex >= 3) && (millis() > (uartTimeoutRx + TEMPO_MAX_RECEVING))) {
         uint8_t expectedSize = uartRxBuffer[2] + 1; // Tamanho do payload + 1 (CRC)
+        #ifdef DEBUG_KEYBOARD
         Serial.print("Tamanho esperado: "); Serial.println(expectedSize);
+        #endif
         if (uartRxIndex >= expectedSize) {
+            #ifdef DEBUG_KEYBOARD
             Serial.print("Pacote recebido, tamanho: "); Serial.println(uartRxIndex);
+            #endif
             uint8_t crcCalc = uartTronCrcSlow(uartRxBuffer, uartRxIndex - 1);
+            #ifdef DEBUG_KEYBOARD
             Serial.print("CRC calculado: 0x"); Serial.println(crcCalc, HEX);
             Serial.print("CRC recebido: 0x"); Serial.println(uartRxBuffer[uartRxIndex - 1], HEX);
+            #endif
             if (crcCalc == uartRxBuffer[uartRxIndex - 1]) {
+                #ifdef DEBUG_KEYBOARD
                 Serial.println("CRC válido, chamando callback");
+                #endif
                 if (uartReceivedCallback != nullptr) {
                     uartReceivedCallback(uartRxBuffer, uartRxIndex);
                 }

@@ -1098,7 +1098,7 @@ void ihmDashboardRefresh() {
     Serial.println("Erro: Um ou mais objetos LVGL são nulos em ihmDashboardRefresh");
     return;
   }
-
+  #ifdef DEBUG_KEYBOARD
   // Depuração dos valores brutos
   Serial.print("Valor bruto gst->tensaoL1: "); Serial.println(gst->tensaoL1);
   Serial.print("Valor bruto gst->tensaoL2: "); Serial.println(gst->tensaoL2);
@@ -1109,6 +1109,7 @@ void ihmDashboardRefresh() {
   Serial.print("Valor bruto gst->fatorDePotenciaL1: "); Serial.println(gst->fatorDePotenciaL1);
   Serial.print("Valor bruto gst->fatorDePotenciaL2: "); Serial.println(gst->fatorDePotenciaL2);
   Serial.print("Valor bruto gst->fatorDePotenciaL3: "); Serial.println(gst->fatorDePotenciaL3);
+  #endif
 
   // Atualiza a label e o status do container de On/Off
   if(gst->statusOnOff){
@@ -1143,7 +1144,7 @@ void ihmDashboardRefresh() {
   sprintf(convstr, "%.2f", (float)gst->fatorDePotenciaL3 / 100.0);
   lv_label_set_text(ui->ui_telaMain_lbFatorL3, convstr);
 
-  Serial.println("Dashboard atualizado com sucesso");
+  //Serial.println("Dashboard atualizado com sucesso");
 }
 //*****************************************************************************
 // Inicialização dos eventos da telaMain

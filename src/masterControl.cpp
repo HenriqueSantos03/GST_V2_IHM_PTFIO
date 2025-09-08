@@ -57,6 +57,7 @@ void masterControlTask() {
     switch (currentState) {
         case STATE_IDLE:
             if (millis() > LRefresh + TIME_REFRESH) {
+                LRefresh = millis();
                 currentState = STATE_SEND_REFRESH;
             }
             break;
@@ -69,7 +70,6 @@ void masterControlTask() {
             if (millis() > stateTimeout + TIMEOUT_STATUS) {
                 //Serial.println("Timeout aguardando STATUS");
                 currentState = STATE_IDLE;
-                LRefresh = millis();
             }
             break;
         case STATE_PROCESS_COMMAND:
@@ -122,11 +122,14 @@ void sendRefreshCommand() {
     bufferTx[indexTx++] = percentL3 & 0xFF;
     uint8_t crc = uartTronCrcSlow(bufferTx, indexTx);
     bufferTx[indexTx++] = crc;
-    Serial.print("Pacote enviado: ");
+    #ifdef DEBUG_KEYBOARD
+        Serial.print("Pacote enviado: ");
+    
     for (uint8_t i = 0; i < indexTx; i++) {
         Serial.print("0x"); Serial.print(bufferTx[i], HEX); Serial.print(" ");
     }
     Serial.println();
+    #endif
     uartTronSendBuffer(bufferTx, indexTx);
 }
 
@@ -136,7 +139,9 @@ void processStatusCommand() {
         currentState = STATE_IDLE;
         return;
     }
+    #ifdef DEBUG_KEYBOARD
     Serial.println("Pacote Status recebido com sucesso.");
+    #endif
     STATUS_GST *gst = getPtrStatusGst();
     uint8_t index = 3;
     gst->statusOnOff = lastPacketBuffer[index++];
@@ -161,18 +166,23 @@ void processStatusCommand() {
     gst->statusPlacaL1 = lastPacketBuffer[index++];
     gst->statusPlacaL2 = lastPacketBuffer[index++];
     gst->statusPlacaL3 = lastPacketBuffer[index++];
+    #ifdef DEBUG_KEYBOARD
     Serial.println("Valores atualizados: Status OnOFF=" + String(gst->statusOnOff) + ", VL1=" + String(gst->tensaoL1) + ", correnteL1=" + String(gst->correnteL1) + ", FPL1="+ String(gst->fatorDePotenciaL1)+ ", VL2=" + String(gst->tensaoL2)+ ", correnteL2=" + String(gst->correnteL2) + ", FPL2="+ String(gst->fatorDePotenciaL2)+ ", VL3=" + String(gst->tensaoL3)+ ", correnteL3=" + String(gst->correnteL3) + ", FPL3="+ String(gst->fatorDePotenciaL3));
+    #endif
     ihmDashboardRefresh();
     LRefresh = millis();
     currentState = STATE_IDLE;
 }
 
 void masterControlHandlePacket(uint8_t* packet, uint8_t size) {
+    #ifdef DEBUG_KEYBOARD
     Serial.print("Pacote recebido: ");
+    
     for (uint8_t i = 0; i < size; i++) {
         Serial.print("0x"); Serial.print(packet[i], HEX); Serial.print(" ");
     }
     Serial.println();
+    #endif
     if (size <= MAX_PACKET_SIZE) {
         memcpy(lastPacketBuffer, packet, size);
         lastPacketSize = size;
